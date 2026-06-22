@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[MOCKUP #197] Licensed & Insured NYC Movers | Big Apple Moving</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+/* ── BAM Design System Tokens ── */
+:root {
+  --navy:   #1F2D6B;
+  --blue:   #3B58A8;
+  --orange: #E05931;
+  --white:  #FFFFFF;
+  --light:  #F5F7FA;
+  --gray:   #6B7280;
+  --text:   #1A1A2E;
+  --radius-card: 20px;
+  --btn-h: 55px;
+  --font-head: 'Lexend', sans-serif;
+  --font-body: 'Roboto Condensed', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); color: var(--text); background: var(--white); font-size: 17px; line-height: 1.6; }
+
+/* ── Mockup Banner ── */
+.mockup-banner {
+  background: var(--navy);
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  letter-spacing: .04em;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+.mockup-banner strong { color: #FACC15; }
+.mockup-badge {
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 20px;
+  padding: 2px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+}
+.badge-new { background: var(--orange); border-color: var(--orange); }
+
+/* ── Nav ── */
+.nav {
+  background: var(--white);
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0 40px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 40px;
+  z-index: 900;
+  box-shadow: 0 2px 12px rgba(0,0,0,.06);
+}
+.nav-logo {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--navy);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav-logo-icon {
+  width: 38px; height: 38px;
+  background: var(--navy);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff;
+  font-size: 20px;
+}
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  font-family: var(--font-body);
+  font-size: 15px;
+}
+.nav-links a { text-decoration: none; color: var(--text); font-weight: 600; transition: color .2s; }
+.nav-links a:hover { color: var(--orange); }
+.nav-right { display: flex; align-items: center; gap: 16px; }
+.nav-phone { font-family: var(--font-body); font-weight: 700; color: var(--navy); font-size: 15px; text-decoration: none; }
+.btn-nav {
+  background: var(--orange);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  height: 42px;
+  padding: 0 22px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+/* ── Hero ── */
+.hero {
+  background: linear-gradient(135deg, var(--navy) 0%, #2A3F8F 60%, #1a5276 100%);
+  color: #fff;
+  padding: 72px 40px 60px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+.hero-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 420px; gap: 60px; align-items: start; position: relative; }
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 30px;
+  padding: 6px 16px;
+  font-size: 13px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: .05em;
+  margin-bottom: 20px;
+  color: #e2e8f0;
+}
+.hero h1 {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.15;
+  color: #fff;
+  margin-bottom: 24px;
+}
+.hero h1 span { color: #FCA949; }
+
+/* Quick Answer Block */
+.quick-answer {
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.2);
+  border-left: 4px solid #FCA949;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 32px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: #e2e8f0;
+}
+.quick-answer strong { color: #FCA949; display: block; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 6px; }
+
+.hero-credentials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+.cred-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: #e2e8f0;
+}
+.cred-chip i { color: #FCA949; font-size: 15px; }
+
+.hero-image-placeholder {
+  border-radius: var(--radius-card);
+  background: rgba(255,255,255,.08);
+  border: 2px dashed rgba(255,255,255,.2);
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: rgba(255,255,255,.5);
+  text-align: center;
+  padding: 20px;
+}
+.hero-image-placeholder i { font-size: 42px; color: rgba(255,255,255,.25); }
+
+/* Lead Form */
+.lead-form-card {
+  background: #fff;
+  border-radius: var(--radius-card);
+  padding: 28px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.25);
+}
+.lead-form-card h3 {
+  font-family: var(--font-head);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.lead-form-card p {
+  font-size: 14px;
+  color: var(--gray);
+  margin-bottom: 18px;
+  font-family: var(--font-body);
+}
+.form-group { margin-bottom: 14px; }
+.form-group input, .form-group select {
+  width: 100%;
+  height: 48px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0 16px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--text);
+  background: #fff;
+  outline: none;
+  transition: border-color .2s;
+}
+.form-group input:focus, .form-group select:focus { border-color: var(--blue); }
+.btn-form {
+  width: 100%;
+  height: var(--btn-h);
+  background: var(--orange);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  letter-spacing: .02em;
+  transition: background .2s, transform .1s;
+}
+.btn-form:hover { background: #c84d26; transform: translateY(-1px); }
+.form-trust {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--gray);
+  margin-top: 10px;
+  font-family: var(--font-body);
+}
+.form-trust i { color: #10b981; font-size: 14px; }
+
+/* ── Trust Bar ── */
+.trust-bar {
+  background: var(--navy);
+  color: #fff;
+  padding: 20px 40px;
+}
+.trust-bar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .03em;
+  white-space: nowrap;
+}
+.trust-item i { font-size: 22px; color: #FCA949; }
+.trust-divider { color: rgba(255,255,255,.2); font-size: 22px; }
+
+/* ── Sections ── */
+section { padding: 72px 40px; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+.section-label {
+  display: inline-block;
+  background: rgba(59,88,168,.1);
+  color: var(--blue);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+h2 {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: clamp(26px, 3.5vw, 38px);
+  color: var(--blue);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.section-lead {
+  font-size: 18px;
+  color: #4b5563;
+  max-width: 700px;
+  margin-bottom: 48px;
+  line-height: 1.7;
+}
+.alt-bg { background: var(--light); }
+
+/* ── Licensing Section ── */
+.license-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.license-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius-card);
+  padding: 28px 24px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.05);
+  position: relative;
+  overflow: hidden;
+}
+.license-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--blue);
+}
+.license-icon {
+  width: 52px; height: 52px;
+  background: rgba(59,88,168,.1);
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--blue);
+  font-size: 26px;
+  margin-bottom: 16px;
+}
+.license-card h3 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.license-card p {
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+.license-number {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--light);
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: .04em;
+}
+.license-number.pending { color: var(--gray); border-style: dashed; }
+.dev-note {
+  background: #FEF9C3;
+  border: 1px solid #FDE047;
+  border-radius: 10px;
+  padding: 14px 18px;
+  font-size: 13px;
+  color: #713f12;
+  font-family: var(--font-body);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.dev-note i { font-size: 18px; color: #ca8a04; margin-top: 1px; flex-shrink: 0; }
+
+/* ── Insurance Coverage ── */
+.insurance-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+.insurance-card {
+  background: #fff;
+  border-radius: var(--radius-card);
+  padding: 32px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 16px rgba(0,0,0,.05);
+}
+.insurance-card.featured {
+  border-color: var(--blue);
+  box-shadow: 0 8px 32px rgba(59,88,168,.12);
+  position: relative;
+}
+.insurance-card.featured::after {
+  content: 'RECOMMENDED';
+  position: absolute;
+  top: 16px; right: 16px;
+  background: var(--orange);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-family: var(--font-body);
+}
+.insurance-card h3 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.insurance-rate {
+  font-family: var(--font-head);
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--blue);
+  margin-bottom: 16px;
+}
+.insurance-rate span { font-size: 15px; font-weight: 400; color: var(--gray); }
+.insurance-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.insurance-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  color: #374151;
+  line-height: 1.5;
+}
+.insurance-list li i { color: var(--blue); font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+.insurance-list li.con i { color: #ef4444; }
+
+.coverage-types {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.coverage-chip {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 20px 16px;
+  text-align: center;
+}
+.coverage-chip i { font-size: 28px; color: var(--blue); margin-bottom: 10px; display: block; }
+.coverage-chip h4 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+.coverage-chip p { font-size: 13px; color: var(--gray); line-height: 1.4; }
+
+/* ── COI Section ── */
+.coi-layout {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 60px;
+  align-items: start;
+}
+.coi-steps { display: flex; flex-direction: column; gap: 0; }
+.coi-step {
+  display: flex;
+  gap: 24px;
+  position: relative;
+  padding-bottom: 32px;
+}
+.coi-step:last-child { padding-bottom: 0; }
+.coi-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 22px;
+  top: 48px;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--blue) 0%, rgba(59,88,168,.1) 100%);
+}
+.coi-step-num {
+  width: 46px; height: 46px;
+  background: var(--blue);
+  color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 18px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+.coi-step-content h3 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--navy);
+  margin-bottom: 6px;
+  margin-top: 10px;
+}
+.coi-step-content p { font-size: 15px; color: #4b5563; line-height: 1.6; }
+.coi-image-placeholder {
+  background: var(--light);
+  border-radius: var(--radius-card);
+  border: 2px dashed #d1d5db;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--gray);
+  text-align: center;
+  padding: 24px;
+}
+.coi-image-placeholder i { font-size: 42px; color: #d1d5db; }
+.coi-highlight-box {
+  background: linear-gradient(135deg, var(--navy), var(--blue));
+  border-radius: var(--radius-card);
+  padding: 24px;
+  color: #fff;
+  margin-top: 32px;
+}
+.coi-highlight-box h4 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #FCA949;
+}
+.coi-highlight-box p { font-size: 14px; line-height: 1.6; color: #e2e8f0; }
+
+/* ── Vetting Section ── */
+.vetting-layout {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.vetting-image-placeholder {
+  background: var(--light);
+  border-radius: var(--radius-card);
+  border: 2px dashed #d1d5db;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--gray);
+  text-align: center;
+  padding: 24px;
+}
+.vetting-image-placeholder i { font-size: 42px; color: #d1d5db; }
+.vetting-points { display: flex; flex-direction: column; gap: 20px; }
+.vetting-point { display: flex; gap: 18px; align-items: flex-start; }
+.vetting-icon {
+  width: 48px; height: 48px;
+  background: rgba(59,88,168,.08);
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--blue);
+  font-size: 24px;
+  flex-shrink: 0;
+}
+.vetting-point h3 { font-family: var(--font-head); font-weight: 700; font-size: 17px; color: var(--navy); margin-bottom: 4px; }
+.vetting-point p { font-size: 15px; color: #4b5563; line-height: 1.6; }
+
+/* ── Claims Section ── */
+.claims-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.claim-step-card {
+  background: #fff;
+  border-radius: var(--radius-card);
+  border: 1px solid #e5e7eb;
+  padding: 28px 24px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(0,0,0,.05);
+}
+.claim-step-num {
+  width: 40px; height: 40px;
+  background: var(--orange);
+  color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 18px;
+  margin: 0 auto 14px;
+}
+.claim-step-card i { font-size: 32px; color: var(--blue); margin-bottom: 14px; display: block; }
+.claim-step-card h3 { font-family: var(--font-head); font-weight: 700; font-size: 17px; color: var(--navy); margin-bottom: 8px; }
+.claim-step-card p { font-size: 14px; color: #4b5563; line-height: 1.6; }
+.claim-connector {
+  position: absolute;
+  right: -13px; top: 50%;
+  transform: translateY(-50%);
+  width: 26px; height: 26px;
+  background: var(--light);
+  border: 1px solid #e5e7eb;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gray);
+  font-size: 14px;
+  z-index: 1;
+}
+.claim-step-card:last-child .claim-connector { display: none; }
+.claims-reassurance {
+  background: linear-gradient(135deg, #ECFDF5, #D1FAE5);
+  border: 1px solid #6EE7B7;
+  border-radius: var(--radius-card);
+  padding: 24px 28px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+.claims-reassurance i { font-size: 32px; color: #059669; flex-shrink: 0; margin-top: 2px; }
+.claims-reassurance h4 { font-family: var(--font-head); font-weight: 700; font-size: 17px; color: #065f46; margin-bottom: 6px; }
+.claims-reassurance p { font-size: 15px; color: #047857; line-height: 1.6; }
+
+/* ── Reviews ── */
+.reviews-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.review-card {
+  background: #fff;
+  border-radius: var(--radius-card);
+  border: 1px solid #e5e7eb;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.04);
+}
+.review-stars { color: #FCA949; font-size: 16px; margin-bottom: 10px; letter-spacing: 2px; }
+.review-tag {
+  display: inline-block;
+  background: rgba(224,89,49,.08);
+  color: var(--orange);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-family: var(--font-body);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.review-text { font-size: 15px; color: #374151; line-height: 1.65; margin-bottom: 16px; font-style: italic; }
+.review-author { font-family: var(--font-head); font-weight: 600; font-size: 14px; color: var(--navy); }
+.review-meta { font-size: 13px; color: var(--gray); margin-top: 2px; font-family: var(--font-body); }
+
+/* ── FAQ ── */
+.faq-list { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+details {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+}
+details[open] { border-color: var(--blue); box-shadow: 0 4px 20px rgba(59,88,168,.1); }
+details summary {
+  padding: 20px 24px;
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--navy);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  list-style: none;
+  user-select: none;
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::after {
+  content: '\eb7d';
+  font-family: 'tabler-icons';
+  font-size: 20px;
+  color: var(--blue);
+  flex-shrink: 0;
+  transition: transform .25s;
+}
+details[open] summary::after { transform: rotate(180deg); }
+details .faq-body { padding: 0 24px 20px; font-size: 16px; color: #374151; line-height: 1.7; }
+.faq-schema-note { text-align: center; font-size: 13px; color: var(--gray); font-family: var(--font-body); margin-top: 18px; font-style: italic; }
+
+/* ── CTA Band ── */
+.cta-band { background: var(--orange); padding: 64px 40px; text-align: center; }
+.cta-band h2 { color: #fff !important; font-size: clamp(26px, 3.5vw, 40px); margin-bottom: 12px; }
+.cta-band p { color: rgba(255,255,255,.88); font-size: 18px; margin-bottom: 32px; line-height: 1.6; }
+.cta-band-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.btn-primary-white {
+  height: var(--btn-h);
+  background: #fff;
+  color: var(--orange);
+  border: none;
+  border-radius: 30px;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 16px;
+  padding: 0 32px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform .15s, box-shadow .15s;
+}
+.btn-primary-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.15); }
+.btn-outline-white {
+  height: var(--btn-h);
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,.6);
+  border-radius: 30px;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 16px;
+  padding: 0 32px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background .15s, border-color .15s;
+}
+.btn-outline-white:hover { background: rgba(255,255,255,.1); border-color: #fff; }
+
+/* ── Nav Cards ── */
+.nav-cards-section { background: var(--light); padding: 60px 40px; }
+.nav-cards-inner { max-width: 1200px; margin: 0 auto; }
+.nav-cards-inner h2 { text-align: center; margin-bottom: 8px; }
+.nav-cards-subtitle { text-align: center; color: var(--gray); font-size: 16px; margin-bottom: 36px; }
+.nav-accordion { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+.nav-accordion-item { border-radius: 14px; overflow: hidden; border: 1px solid #e5e7eb; background: #fff; }
+.nav-accordion-header {
+  padding: 18px 24px;
+  background: var(--navy);
+  color: #fff;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-accordion-header i { font-size: 20px; color: #FCA949; }
+.nav-accordion-body { padding: 16px 24px; display: flex; flex-wrap: wrap; gap: 10px; }
+.nav-chip {
+  background: var(--light);
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 7px 14px;
+  font-size: 13px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background .15s, border-color .15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.nav-chip:hover { background: rgba(59,88,168,.08); border-color: var(--blue); color: var(--blue); }
+
+/* ── Footer ── */
+.footer { background: var(--navy); color: rgba(255,255,255,.75); padding: 56px 40px 28px; }
+.footer-inner { max-width: 1200px; margin: 0 auto; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.footer-brand { display: flex; flex-direction: column; gap: 14px; }
+.footer-logo { font-family: var(--font-head); font-weight: 800; font-size: 22px; color: #fff; display: flex; align-items: center; gap: 10px; }
+.footer-logo-icon { width: 36px; height: 36px; background: var(--orange); border-radius: 9px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 18px; }
+.footer-desc { font-size: 14px; line-height: 1.7; max-width: 260px; }
+.footer-contact { display: flex; flex-direction: column; gap: 8px; font-size: 14px; }
+.footer-contact a { color: rgba(255,255,255,.75); text-decoration: none; display: flex; align-items: center; gap: 7px; }
+.footer-contact a:hover { color: #fff; }
+.footer-contact i { font-size: 16px; color: #FCA949; }
+.footer-col h4 { font-family: var(--font-head); font-weight: 700; font-size: 14px; color: #fff; margin-bottom: 14px; text-transform: uppercase; letter-spacing: .06em; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.footer-links a { color: rgba(255,255,255,.65); text-decoration: none; font-size: 14px; transition: color .15s; }
+.footer-links a:hover { color: #fff; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.1); padding-top: 20px; display: flex; align-items: center; justify-content: space-between; font-size: 13px; gap: 20px; flex-wrap: wrap; }
+.footer-bottom-links { display: flex; gap: 20px; }
+.footer-bottom-links a { color: rgba(255,255,255,.55); text-decoration: none; }
+.footer-bottom-links a:hover { color: rgba(255,255,255,.9); }
+</style>
+</head>
+<body>
+
+<!-- Mockup Banner -->
+<div class="mockup-banner">
+  <span class="mockup-badge">NOT LIVE</span>
+  <span>MOCKUP · <strong>Trello #197</strong> — Licensed &amp; Insured Movers NYC · <code>/licensed-insured-movers-nyc/</code></span>
+  <span class="mockup-badge badge-new">NEW PAGE</span>
+</div>
+
+<!-- Nav -->
+<nav class="nav">
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon"><i class="ti ti-building-community"></i></div>
+    Big Apple Moving
+  </a>
+  <ul class="nav-links">
+    <li><a href="#">Moving</a></li>
+    <li><a href="#">Long Distance</a></li>
+    <li><a href="#">Storage</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="tel:+12123650707" class="nav-phone"><i class="ti ti-phone"></i> (212) 365-0707</a>
+    <a href="#" class="btn-nav">Get Free Quote</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge"><i class="ti ti-shield-check"></i> NYC's Licensed &amp; Insured Movers Since 1979</div>
+      <h1>Licensed &amp; Insured <span>NYC Movers</span> — Big Apple Moving</h1>
+      <div class="quick-answer">
+        <strong>Quick Answer</strong>
+        Big Apple Moving is fully licensed by the NYSDOT and FMCSA, carries comprehensive cargo and liability insurance, and generates Certificates of Insurance (COI) for any NYC building that requires one. We've been operating legally in New York since 1979.
+      </div>
+      <div class="hero-credentials">
+        <span class="cred-chip"><i class="ti ti-certificate"></i> NYSDOT Licensed</span>
+        <span class="cred-chip"><i class="ti ti-certificate"></i> FMCSA Registered</span>
+        <span class="cred-chip"><i class="ti ti-file-certificate"></i> COI Ready</span>
+        <span class="cred-chip"><i class="ti ti-shield-lock"></i> Fully Insured</span>
+        <span class="cred-chip"><i class="ti ti-user-check"></i> Background Checked</span>
+        <span class="cred-chip"><i class="ti ti-star-filled"></i> A+ BBB Rated</span>
+      </div>
+      <div class="hero-image-placeholder">
+        <i class="ti ti-truck"></i>
+        <strong>HERO IMAGE</strong>
+        BAM branded truck in front of NYC apartment building<br>
+        WebP · max 200KB · loading="eager" fetchpriority="high"<br>
+        Alt: "Licensed Big Apple Moving truck outside NYC apartment building"
+      </div>
+    </div>
+    <div>
+      <div class="lead-form-card">
+        <h3>Get Your Free Moving Quote</h3>
+        <p>Fully licensed, insured &amp; COI-ready for your building</p>
+        <div class="form-group"><input type="text" placeholder="Your name"></div>
+        <div class="form-group"><input type="tel" placeholder="Phone number"></div>
+        <div class="form-group"><input type="email" placeholder="Email address"></div>
+        <div class="form-group">
+          <select>
+            <option>Move size</option>
+            <option>Studio</option>
+            <option>1 Bedroom</option>
+            <option>2 Bedrooms</option>
+            <option>3 Bedrooms</option>
+            <option>4+ Bedrooms</option>
+          </select>
+        </div>
+        <div class="form-group"><input type="text" placeholder="Moving from (zip or neighborhood)"></div>
+        <div class="form-group"><input type="text" placeholder="Moving to (zip or neighborhood)"></div>
+        <button class="btn-form">Get My Free Quote &rarr;</button>
+        <div class="form-trust"><i class="ti ti-lock"></i> No commitment &middot; We send your COI free</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust Bar -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item"><i class="ti ti-calendar"></i> Since 1979</div>
+    <span class="trust-divider">|</span>
+    <div class="trust-item"><i class="ti ti-certificate"></i> NYSDOT + FMCSA Licensed</div>
+    <span class="trust-divider">|</span>
+    <div class="trust-item"><i class="ti ti-file-certificate"></i> COI for Any NYC Building</div>
+    <span class="trust-divider">|</span>
+    <div class="trust-item"><i class="ti ti-shield-check"></i> Cargo + Liability Insured</div>
+    <span class="trust-divider">|</span>
+    <div class="trust-item"><i class="ti ti-rosette-discount-check"></i> A+ BBB Rating</div>
+  </div>
+</div>
+
+<!-- Section 1: Licensing -->
+<section>
+  <div class="section-inner">
+    <span class="section-label">Our Credentials</span>
+    <h2>Fully Licensed to Move You in New York</h2>
+    <p class="section-lead">Every legitimate moving company in New York must hold specific state and federal licenses. Here's exactly what Big Apple Moving carries — and how to verify it independently.</p>
+    <div class="license-grid">
+      <div class="license-card">
+        <div class="license-icon"><i class="ti ti-building-bank"></i></div>
+        <h3>NYSDOT Authorization</h3>
+        <p>Licensed by the New York State Department of Transportation to operate as a household goods carrier within New York State.</p>
+        <span class="license-number pending"><i class="ti ti-clock"></i> #[Dor to confirm]</span>
+      </div>
+      <div class="license-card">
+        <div class="license-icon"><i class="ti ti-map-2"></i></div>
+        <h3>FMCSA Registration</h3>
+        <p>Registered with the Federal Motor Carrier Safety Administration for interstate moves — required for any move crossing state lines.</p>
+        <span class="license-number pending"><i class="ti ti-clock"></i> USDOT #[Dor to confirm]</span>
+      </div>
+      <div class="license-card">
+        <div class="license-icon"><i class="ti ti-star"></i></div>
+        <h3>A+ BBB Accreditation</h3>
+        <p>Accredited by the Better Business Bureau with an A+ rating — the highest possible rating, reflecting our complaint history and business practices.</p>
+        <span class="license-number"><i class="ti ti-check"></i> Verified A+ BBB</span>
+      </div>
+    </div>
+    <div class="dev-note">
+      <i class="ti ti-alert-triangle"></i>
+      <div><strong>Dev Note — Dor to confirm before publishing Section 1:</strong> Pull the actual NYSDOT and USDOT/FMCSA license numbers from BAM's existing certificates or website footer. Display as verifiable text links to safer.fmcsa.dot.gov. Remove "[Dor to confirm]" placeholders once numbers are provided.</div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2: Insurance Coverage -->
+<section class="alt-bg">
+  <div class="section-inner">
+    <span class="section-label">Insurance Coverage</span>
+    <h2>What We Carry — And What It Covers</h2>
+    <p class="section-lead">Big Apple Moving carries multiple types of insurance. Here's what each covers so you know exactly how your belongings are protected on move day.</p>
+    <div class="coverage-types" style="margin-bottom: 40px;">
+      <div class="coverage-chip">
+        <i class="ti ti-package"></i>
+        <h4>Cargo Insurance</h4>
+        <p>Covers your belongings while in transit or in our care</p>
+      </div>
+      <div class="coverage-chip">
+        <i class="ti ti-shield-half"></i>
+        <h4>General Liability</h4>
+        <p>Covers property damage to your building or unit during the move</p>
+      </div>
+      <div class="coverage-chip">
+        <i class="ti ti-user-shield"></i>
+        <h4>Workers' Compensation</h4>
+        <p>Covers our crew — protects you from liability if a mover is injured</p>
+      </div>
+    </div>
+    <span class="section-label" style="margin-bottom: 14px; display: inline-block;">Valuation Options — Understanding Your Coverage Level</span>
+    <div class="insurance-grid">
+      <div class="insurance-card">
+        <h3>Released Value Protection</h3>
+        <div class="insurance-rate">60&cent; <span>per pound, per item</span></div>
+        <ul class="insurance-list">
+          <li><i class="ti ti-check"></i> Included at no extra charge</li>
+          <li><i class="ti ti-check"></i> Federal minimum required coverage</li>
+          <li class="con"><i class="ti ti-x"></i> Pays 60&cent;/lb regardless of item value — a 50lb TV gets $30 regardless of cost</li>
+          <li class="con"><i class="ti ti-x"></i> Not adequate for high-value items</li>
+        </ul>
+      </div>
+      <div class="insurance-card featured">
+        <h3>Full Value Protection</h3>
+        <div class="insurance-rate">Replacement <span>cost coverage</span></div>
+        <ul class="insurance-list">
+          <li><i class="ti ti-check"></i> Lost or damaged items repaired, replaced, or cash settlement at current market value</li>
+          <li><i class="ti ti-check"></i> Covers electronics, furniture, art, and valuables at actual value</li>
+          <li><i class="ti ti-check"></i> Additional premium applies — ask for a quote</li>
+          <li><i class="ti ti-check"></i> Recommended for moves with high-value items</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3: COI Generation -->
+<section>
+  <div class="section-inner">
+    <div class="coi-layout">
+      <div>
+        <span class="section-label">Certificates of Insurance</span>
+        <h2>We Handle Your Building's COI — Automatically</h2>
+        <p class="section-lead" style="margin-bottom: 36px;">Most NYC buildings require a Certificate of Insurance (COI) before movers are allowed in. Big Apple Moving generates COIs as part of every booking — no extra step required.</p>
+        <div class="coi-steps">
+          <div class="coi-step">
+            <div class="coi-step-num">1</div>
+            <div class="coi-step-content">
+              <h3>Tell us your building's requirements</h3>
+              <p>Share your building's management company name and any specific COI requirements — most NYC buildings have a standard format. We've seen them all.</p>
+            </div>
+          </div>
+          <div class="coi-step">
+            <div class="coi-step-num">2</div>
+            <div class="coi-step-content">
+              <h3>We prepare and send the COI</h3>
+              <p>Our office prepares the Certificate of Insurance naming your building as the additional insured and sends it directly to building management.</p>
+            </div>
+          </div>
+          <div class="coi-step">
+            <div class="coi-step-num">3</div>
+            <div class="coi-step-content">
+              <h3>Your move is cleared — no delays</h3>
+              <p>With the COI confirmed in advance, your moving day proceeds without delays at the door. No scrambling, no surprise paperwork requirements.</p>
+            </div>
+          </div>
+        </div>
+        <div class="coi-highlight-box">
+          <h4><i class="ti ti-clock"></i> COI turnaround</h4>
+          <p>We generate COIs same-day for most requests. For buildings with non-standard requirements, allow 24 hours. Contact us as early as possible before your move date.</p>
+          <br>
+          <div class="dev-note" style="background: rgba(0,0,0,.2); border-color: rgba(255,255,255,.2); color: rgba(255,255,255,.8); margin-top: 0;">
+            <i class="ti ti-alert-triangle" style="color: #FCA949;"></i>
+            <div style="font-size: 12px;">Dev Note: Dor to confirm actual COI turnaround time and process before this section goes live.</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="coi-image-placeholder">
+          <i class="ti ti-file-description"></i>
+          <strong>COI IMAGE</strong>
+          Screenshot or photo of a Certificate of Insurance document<br>
+          WebP · max 100KB · loading="lazy"<br>
+          Alt: "Certificate of Insurance document prepared for NYC building move"
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4: Crew Vetting -->
+<section class="alt-bg">
+  <div class="section-inner">
+    <div class="vetting-layout">
+      <div class="vetting-image-placeholder">
+        <i class="ti ti-users"></i>
+        <strong>CREW IMAGE</strong>
+        BAM mover carefully wrapping furniture<br>
+        Shows professional handling, branded uniform<br>
+        WebP · max 100KB · loading="lazy"<br>
+        Alt: "Big Apple Moving crew member wrapping furniture before NYC move"
+      </div>
+      <div>
+        <span class="section-label">Background Checked &amp; Trained</span>
+        <h2>Our Crews Are Background Checked and Trained In-House</h2>
+        <p class="section-lead" style="margin-bottom: 32px;">Your trust is backed by more than paperwork. Here's what goes into every person we send to your door.</p>
+        <div class="vetting-points">
+          <div class="vetting-point">
+            <div class="vetting-icon"><i class="ti ti-id-badge"></i></div>
+            <div>
+              <h3>Criminal background checks</h3>
+              <p>Every crew member undergoes a background check before joining Big Apple Moving. You're not opening your door to a stranger — you're opening it to a vetted professional.</p>
+            </div>
+          </div>
+          <div class="vetting-point">
+            <div class="vetting-icon"><i class="ti ti-school"></i></div>
+            <div>
+              <h3>In-house training</h3>
+              <p>Our crews are trained in-house on proper packing techniques, furniture wrapping, building protection (floors, doorways, elevators), and safe loading procedures. No shortcuts.</p>
+            </div>
+          </div>
+          <div class="vetting-point">
+            <div class="vetting-icon"><i class="ti ti-truck-delivery"></i></div>
+            <div>
+              <h3>Our own crew and equipment</h3>
+              <p>Big Apple Moving uses its own moving teams and owned fleet — not third-party crews. When you book with us, you know exactly who is showing up.</p>
+            </div>
+          </div>
+          <div class="vetting-point">
+            <div class="vetting-icon"><i class="ti ti-award"></i></div>
+            <div>
+              <h3>45+ years of operational standards</h3>
+              <p>Since 1979, every crew member has operated under the same standards. Licensing, insurance, and professionalism aren't additions — they're the baseline.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 5: Damage Claims -->
+<section>
+  <div class="section-inner">
+    <span class="section-label">Damage Claims</span>
+    <h2>What Happens If Something Gets Damaged?</h2>
+    <p class="section-lead">We take exceptional care with every move. But if something unexpected happens, here's exactly how the claims process works — clearly, with no runaround.</p>
+    <div class="claims-grid">
+      <div class="claim-step-card">
+        <div class="claim-step-num">1</div>
+        <i class="ti ti-camera"></i>
+        <h3>Document the damage</h3>
+        <p>As soon as you notice damage, photograph it clearly. Note the item, the nature of the damage, and when it was discovered.</p>
+        <span class="claim-connector"><i class="ti ti-arrow-right"></i></span>
+      </div>
+      <div class="claim-step-card">
+        <div class="claim-step-num">2</div>
+        <i class="ti ti-mail"></i>
+        <h3>Contact us within 9 months</h3>
+        <p>Submit your claim in writing to our claims department. Federal law requires claims to be filed within 9 months of delivery for interstate moves.</p>
+        <span class="claim-connector"><i class="ti ti-arrow-right"></i></span>
+      </div>
+      <div class="claim-step-card">
+        <div class="claim-step-num">3</div>
+        <i class="ti ti-check"></i>
+        <h3>We review and resolve</h3>
+        <p>We'll review your claim and respond within 30 days. Resolution is based on your chosen valuation — Released Value (60&cent;/lb) or Full Value Protection.</p>
+      </div>
+    </div>
+    <div class="claims-reassurance">
+      <i class="ti ti-shield-check"></i>
+      <div>
+        <h4>We'd rather do the move right than process a claim</h4>
+        <p>Our crew takes extensive precautions — wrapping all furniture in moving blankets, padding doorways and elevators, using floor runners and corner protectors on every job. Damage claims are rare. When they do happen, we honor them.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="alt-bg">
+  <div class="section-inner">
+    <span class="section-label">What Our Customers Say</span>
+    <h2>Trusted by Thousands of NYC Movers</h2>
+    <p class="section-lead">Real reviews from customers who chose Big Apple Moving because of our licensing, insurance, and professionalism.</p>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="review-tag">Insurance &amp; Licensing</div>
+        <p class="review-text">"My co-op board required a very specific COI with exact liability amounts. Big Apple Moving had it ready in a few hours and sent it directly to building management. No issues on move day."</p>
+        <div class="review-author">Sarah M.</div>
+        <div class="review-meta">Upper West Side &middot; Google Review Placeholder</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="review-tag">Professional &amp; Licensed</div>
+        <p class="review-text">"I specifically looked for a licensed and insured mover after a bad experience with an unlicensed company years ago. Big Apple Moving showed up professionally, handled everything carefully, and the paperwork was all in order."</p>
+        <div class="review-author">Marcus T.</div>
+        <div class="review-meta">Brooklyn Heights &middot; Google Review Placeholder</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="review-tag">COI Ready</div>
+        <p class="review-text">"My high-rise building has very strict COI requirements. Big Apple Moving knew exactly what was needed and had everything cleared before I even called the building super."</p>
+        <div class="review-author">Jennifer K.</div>
+        <div class="review-meta">Midtown Manhattan &middot; Yelp Review Placeholder</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="review-tag">Long Distance &middot; Fully Insured</div>
+        <p class="review-text">"Moving from NYC to NJ with a full-value protection option — they walked me through exactly what was covered and the difference between the two options. No surprises, everything arrived perfectly."</p>
+        <div class="review-author">Daniel F.</div>
+        <div class="review-meta">Manhattan &rarr; Hoboken &middot; Google Review Placeholder</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="section-inner">
+    <span class="section-label" style="display: block; text-align: center;">Common Questions</span>
+    <h2 style="text-align: center; margin-bottom: 12px;">Frequently Asked Questions</h2>
+    <p class="section-lead" style="text-align: center; margin: 0 auto 40px;">Everything you need to know about our licensing, insurance, and coverage.</p>
+    <div class="faq-list">
+      <details open>
+        <summary>Is Big Apple Moving licensed in New York?</summary>
+        <div class="faq-body">Yes. Big Apple Moving holds a New York State Department of Transportation (NYSDOT) household goods carrier authorization and is registered with the Federal Motor Carrier Safety Administration (FMCSA) for interstate moves. We've maintained these licenses continuously since 1979. You can verify our FMCSA registration at safer.fmcsa.dot.gov by searching our company name.</div>
+      </details>
+      <details>
+        <summary>What insurance does Big Apple Moving carry?</summary>
+        <div class="faq-body">We carry three types of coverage: (1) Cargo insurance — covers your belongings while in our care and in transit. (2) General liability insurance — covers damage to your building, floors, walls, or property during the move. (3) Workers' compensation — covers our crew in the event of injury, protecting you from any secondary liability. All moves include Released Value Protection (60&cent;/lb) at no charge; Full Value Protection is available as an upgrade.</div>
+      </details>
+      <details>
+        <summary>Can you provide a Certificate of Insurance (COI) for my building?</summary>
+        <div class="faq-body">Yes — and we do this regularly for NYC buildings. When you book, let us know your building's management company, any specific COI requirements (liability minimums, who to name as additional insured, etc.), and we'll prepare and send the certificate directly to building management. Most COIs are ready same-day. There is no extra charge for COI generation.</div>
+      </details>
+      <details>
+        <summary>What is the difference between Released Value and Full Value Protection?</summary>
+        <div class="faq-body">Released Value Protection is the federal minimum coverage included with every move at no extra charge. It pays 60 cents per pound per item — so a 50-pound TV would receive a $30 settlement regardless of its purchase price. Full Value Protection covers repair, replacement, or cash settlement at the item's current market value. For any move involving electronics, furniture, art, or items with significant monetary value, Full Value Protection is strongly recommended.</div>
+      </details>
+      <details>
+        <summary>What do I do if something is damaged during my move?</summary>
+        <div class="faq-body">First, photograph the damage clearly as soon as you notice it. Then contact our claims department in writing — by email or certified mail. Federal regulations require claims to be filed within 9 months of delivery for interstate moves; for local moves, contact us as promptly as possible. We'll acknowledge your claim within 30 days and work toward a resolution based on your valuation level.</div>
+      </details>
+      <details>
+        <summary>Do you use subcontractors or your own movers?</summary>
+        <div class="faq-body">Big Apple Moving uses its own moving teams and owned fleet. When you book with us, you know exactly who is showing up. We do not broker your move to a third-party company or use contract labor. Some moving brokers sell your job to whoever is available, which creates accountability gaps. With Big Apple Moving, the team you speak with is the team that moves you.</div>
+      </details>
+      <details>
+        <summary>Are your movers background checked?</summary>
+        <div class="faq-body">Yes. Every crew member at Big Apple Moving undergoes a background check before joining our team. They are also trained in-house on proper packing, furniture protection, building care (floor runners, elevator pads, corner protectors), and safe loading procedures. We've maintained these standards since 1979 — every mover represents our company, and we take that seriously.</div>
+      </details>
+    </div>
+    <p class="faq-schema-note"><i class="ti ti-code"></i> FAQPage schema required on all 7 questions — these drive AI citation visibility in ChatGPT, Perplexity, and Google AI Overviews</p>
+  </div>
+</section>
+
+<!-- CTA Band -->
+<div class="cta-band">
+  <h2>Get Your Free Quote — Fully Licensed, Insured &amp; COI-Ready</h2>
+  <p>Big Apple Moving has handled NYC's most complex COI requirements and high-value moves since 1979.<br>Get a quote and your building's COI handled in one step.</p>
+  <div class="cta-band-btns">
+    <a href="#" class="btn-primary-white"><i class="ti ti-file-description"></i> Get a Free Quote + COI</a>
+    <a href="tel:+12123650707" class="btn-outline-white"><i class="ti ti-phone"></i> Call (212) 365-0707</a>
+  </div>
+</div>
+
+<!-- Global Nav Cards -->
+<section class="nav-cards-section">
+  <div class="nav-cards-inner">
+    <h2>Movers Serving All of New York</h2>
+    <p class="nav-cards-subtitle">Big Apple Moving serves all five boroughs and the tri-state area.</p>
+    <div class="nav-accordion">
+      <div class="nav-accordion-item">
+        <div class="nav-accordion-header">
+          <span><i class="ti ti-map-pin" style="margin-right:8px;color:#FCA949;"></i> Long Distance Routes</span>
+          <i class="ti ti-chevron-down"></i>
+        </div>
+        <div class="nav-accordion-body">
+          <a href="#" class="nav-chip"><i class="ti ti-arrow-right"></i> NYC &rarr; Florida</a>
+          <a href="#" class="nav-chip"><i class="ti ti-arrow-right"></i> NYC &rarr; New Jersey</a>
+          <a href="#" class="nav-chip"><i class="ti ti-arrow-right"></i> NYC &rarr; California</a>
+          <a href="#" class="nav-chip"><i class="ti ti-arrow-right"></i> NYC &rarr; Texas</a>
+          <a href="#" class="nav-chip"><i class="ti ti-arrow-right"></i> NYC &rarr; Washington DC</a>
+          <a href="#" class="nav-chip"><i class="ti ti-arrow-right"></i> NYC &rarr; Georgia</a>
+        </div>
+      </div>
+      <div class="nav-accordion-item">
+        <div class="nav-accordion-header">
+          <span><i class="ti ti-buildings" style="margin-right:8px;color:#FCA949;"></i> Manhattan Movers</span>
+          <i class="ti ti-chevron-down"></i>
+        </div>
+        <div class="nav-accordion-body">
+          <a href="#" class="nav-chip">Upper West Side</a>
+          <a href="#" class="nav-chip">Upper East Side</a>
+          <a href="#" class="nav-chip">Midtown</a>
+          <a href="#" class="nav-chip">Chelsea</a>
+          <a href="#" class="nav-chip">Tribeca</a>
+          <a href="#" class="nav-chip">Lower East Side</a>
+          <a href="#" class="nav-chip">SoHo</a>
+          <a href="#" class="nav-chip">Harlem</a>
+          <a href="#" class="nav-chip">Washington Heights</a>
+          <a href="#" class="nav-chip">Inwood</a>
+        </div>
+      </div>
+      <div class="nav-accordion-item">
+        <div class="nav-accordion-header">
+          <span><i class="ti ti-building" style="margin-right:8px;color:#FCA949;"></i> Brooklyn Movers</span>
+          <i class="ti ti-chevron-down"></i>
+        </div>
+        <div class="nav-accordion-body">
+          <a href="#" class="nav-chip">Williamsburg</a>
+          <a href="#" class="nav-chip">Park Slope</a>
+          <a href="#" class="nav-chip">Brooklyn Heights</a>
+          <a href="#" class="nav-chip">DUMBO</a>
+          <a href="#" class="nav-chip">Bushwick</a>
+          <a href="#" class="nav-chip">Crown Heights</a>
+          <a href="#" class="nav-chip">Bed-Stuy</a>
+          <a href="#" class="nav-chip">Sunset Park</a>
+        </div>
+      </div>
+      <div class="nav-accordion-item">
+        <div class="nav-accordion-header">
+          <span><i class="ti ti-home-2" style="margin-right:8px;color:#FCA949;"></i> Queens &amp; Bronx Movers</span>
+          <i class="ti ti-chevron-down"></i>
+        </div>
+        <div class="nav-accordion-body">
+          <a href="#" class="nav-chip">Astoria</a>
+          <a href="#" class="nav-chip">Long Island City</a>
+          <a href="#" class="nav-chip">Flushing</a>
+          <a href="#" class="nav-chip">Jamaica</a>
+          <a href="#" class="nav-chip">Forest Hills</a>
+          <a href="#" class="nav-chip">Riverdale</a>
+          <a href="#" class="nav-chip">Fordham</a>
+          <a href="#" class="nav-chip">Mott Haven</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="footer-logo-icon"><i class="ti ti-building-community"></i></div>
+          Big Apple Moving
+        </div>
+        <p class="footer-desc">New York's licensed and insured movers since 1979. NYSDOT authorized, FMCSA registered, A+ BBB rated. COI-ready for any NYC building.</p>
+        <div class="footer-contact">
+          <a href="tel:+12123650707"><i class="ti ti-phone"></i> (212) 365-0707</a>
+          <a href="mailto:customercare@bigapplemoving.com"><i class="ti ti-mail"></i> customercare@bigapplemoving.com</a>
+          <a href="#"><i class="ti ti-map-pin"></i> 750 Lexington Ave, New York, NY 10022</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Moving Services</h4>
+        <ul class="footer-links">
+          <li><a href="#">Local Moving NYC</a></li>
+          <li><a href="#">Long Distance Moving</a></li>
+          <li><a href="#">Residential Moving</a></li>
+          <li><a href="#">Commercial Moving</a></li>
+          <li><a href="#">Same Day Movers</a></li>
+          <li><a href="#">Last Minute Movers</a></li>
+          <li><a href="#">Licensed &amp; Insured Movers NYC</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Long Distance</h4>
+        <ul class="footer-links">
+          <li><a href="#">NYC to Florida</a></li>
+          <li><a href="#">NYC to New Jersey</a></li>
+          <li><a href="#">NYC to California</a></li>
+          <li><a href="#">NYC to Texas</a></li>
+          <li><a href="#">NYC to Washington DC</a></li>
+          <li><a href="#">NYC to Georgia</a></li>
+          <li><a href="#">All Long Distance Routes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="#">About Big Apple Moving</a></li>
+          <li><a href="#">Our Movers</a></li>
+          <li><a href="#">Big Apple Guarantee</a></li>
+          <li><a href="#">Promotions</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Big Apple Moving &amp; Storage Inc. &copy; 2025. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Terms &amp; Conditions</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Website Accessibility</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
