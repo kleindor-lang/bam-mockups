@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MOCKUP — New York to Georgia Movers | bigapplemoving.com/long-distance-movers/new-york-to-georgia/</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Roboto+Condensed:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+<style>
+/* ====================================================
+   BAM DESIGN SYSTEM — from live site inspection
+   bigapplemoving.com — June 2026
+   Orange: #E05931 | Blue H2: #3B58A8 | White bg: #FFFFFF
+   Headings: Lexend | Body: Roboto Condensed
+   Cards: 20px radius, 1.25px solid #F1F1F1
+   Buttons: 55px radius (pill)
+   ==================================================== */
+
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --orange:#E05931;
+  --blue:#3B58A8;
+  --navy:#1F2D6B;
+  --dark:#222222;
+  --body:#333333;
+  --muted:#666666;
+  --white:#FFFFFF;
+  --border:#F1F1F1;
+  --bg-light:#F7F5F2;
+  --bg-blue-tint:#EEF1FA;
+  --orange-tint:#FEE8E0;
+}
+body{font-family:'Roboto Condensed',sans-serif;font-size:15px;color:var(--body);background:var(--white);line-height:1.55}
+h1,h2,h3,h4{font-family:'Lexend',sans-serif}
+h1{color:var(--orange);font-size:34px;font-weight:700;line-height:1.2}
+h2{color:var(--blue);font-size:28px;font-weight:700;line-height:1.25;margin-bottom:14px}
+h3{color:var(--dark);font-size:17px;font-weight:700;margin-bottom:6px}
+p{font-size:14px;color:#555;line-height:1.65;margin-bottom:10px}
+p:last-child{margin-bottom:0}
+a{color:inherit;text-decoration:none}
+
+/* MOCKUP BANNER */
+.mockup-banner{background:var(--navy);color:#fff;text-align:center;padding:9px 16px;font-size:11px;font-family:'Roboto Condensed',sans-serif;font-weight:600;letter-spacing:.06em}
+.mockup-banner span{background:rgba(255,255,255,.15);padding:2px 9px;border-radius:3px;margin:0 5px}
+
+/* NAV */
+.nav{background:#fff;border-bottom:1px solid #EFEFEF;padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:80px;position:sticky;top:0;z-index:100}
+.nav-logo{font-family:'Lexend',sans-serif;font-size:22px;font-weight:700;color:var(--orange)}
+.nav-logo span{color:var(--dark)}
+.nav-links{display:flex;gap:28px;font-size:13px;font-weight:500;color:#444}
+.nav-links span{cursor:pointer}
+.nav-links span:hover{color:var(--orange)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.nav-phone{font-size:12px;color:#555;line-height:1.3;text-align:right}
+.nav-phone strong{display:block;font-size:14px;color:var(--dark)}
+.nav-cta{background:var(--orange);color:#fff;border:none;border-radius:55px;padding:10px 20px;font-family:'Lexend',sans-serif;font-size:12px;font-weight:700;cursor:pointer;letter-spacing:.02em;white-space:nowrap}
+
+/* HERO — 2-col: text+form LEFT, image placeholder RIGHT */
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:440px;background:#fff;border-bottom:1px solid #F0F0F0}
+.hero-left{padding:48px 40px 48px 60px;display:flex;flex-direction:column;justify-content:center}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--orange-tint);color:var(--orange);font-size:11px;font-weight:700;padding:4px 12px;border-radius:99px;margin-bottom:14px;font-family:'Lexend',sans-serif}
+.hero-sub{font-size:14px;color:#555;margin:12px 0 20px;line-height:1.6}
+.qa-box{border-left:3px solid var(--orange);background:#FFF8F5;border-radius:0 8px 8px 0;padding:12px 16px;margin-bottom:22px;font-size:13px;color:#444;line-height:1.65}
+.qa-label{font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--orange);text-transform:uppercase;margin-bottom:5px;font-family:'Lexend',sans-serif}
+.form-box{background:#fff;border:1.25px solid var(--border);border-radius:20px;padding:20px 22px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.field{display:flex;flex-direction:column;gap:4px}
+.field label{font-size:11px;color:#888;font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-family:'Lexend',sans-serif}
+.field input,.field select{border:1px solid #E5E5E5;border-radius:8px;padding:9px 12px;font-size:13px;font-family:'Roboto Condensed',sans-serif;color:var(--body);background:#fff}
+.form-cta{width:100%;background:var(--orange);color:#fff;border:none;border-radius:55px;padding:12px;font-size:14px;font-weight:700;cursor:pointer;margin-top:8px;font-family:'Lexend',sans-serif;letter-spacing:.02em}
+.hero-right{background:var(--bg-light);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.hero-img-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:#aaa}
+.hero-img-placeholder i{font-size:40px;color:#CCC}
+.hero-img-placeholder span{font-size:12px;color:#bbb;font-family:'Roboto Condensed',sans-serif}
+
+/* TRUST BAR */
+.trust-bar{background:var(--navy);padding:16px 60px}
+.trust-inner{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;max-width:900px;margin:0 auto}
+.trust-item{display:flex;align-items:center;gap:8px;color:#fff}
+.trust-item i{font-size:16px;color:rgba(255,255,255,.65)}
+.trust-item span{font-size:13px;font-family:'Roboto Condensed',sans-serif}
+.trust-item strong{font-weight:700;font-family:'Lexend',sans-serif}
+
+/* SECTIONS */
+.section{padding:52px 60px}
+.section.bg-light{background:var(--bg-light)}
+.section.bg-blue-tint{background:var(--bg-blue-tint)}
+.sec-inner{max-width:880px;margin:0 auto}
+.section-label{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--orange);text-transform:uppercase;margin-bottom:8px;font-family:'Lexend',sans-serif}
+.section-intro{font-size:14px;color:#666;margin-top:-6px;margin-bottom:24px;line-height:1.6}
+
+/* ROUTE TABLE */
+.route-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+.route-table tr{border-bottom:1px solid var(--border)}
+.route-table td:first-child{font-family:'Lexend',sans-serif;font-weight:600;color:var(--blue);padding:11px 14px 11px 0;width:42%;vertical-align:top}
+.route-table td:last-child{padding:11px 0;color:#444}
+
+/* PRICING */
+.price-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px}
+.price-card{background:#fff;border:1.25px solid var(--border);border-radius:20px;padding:22px;text-align:center}
+.price-card.featured{border:2px solid var(--orange)}
+.featured-badge{background:var(--orange-tint);color:var(--orange);font-size:10px;font-weight:700;padding:2px 10px;border-radius:4px;display:inline-block;margin-bottom:8px;font-family:'Lexend',sans-serif}
+.price-size{font-size:12px;font-weight:600;color:#888;margin-bottom:5px;font-family:'Lexend',sans-serif;text-transform:uppercase;letter-spacing:.04em}
+.price-amount{font-size:22px;font-weight:700;color:var(--orange);font-family:'Lexend',sans-serif;line-height:1.1}
+.price-sub{font-size:11px;color:#aaa;margin-top:4px}
+.pricing-note{font-size:13px;color:#777;font-style:italic;line-height:1.65;margin-bottom:18px;padding:12px 14px;background:#FAFAFA;border-radius:8px;border-left:3px solid #E0E0E0}
+
+/* SERVICE COMPARISON TABLE */
+.comp-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+.comp-table th{background:var(--bg-blue-tint);color:var(--blue);font-family:'Lexend',sans-serif;padding:10px 12px;text-align:left;font-size:12px;font-weight:700;border-bottom:1px solid #D6DEEF}
+.comp-table td{padding:10px 12px;border-bottom:1px solid var(--border);color:#444;vertical-align:top;font-size:13px}
+.comp-table td:first-child{font-weight:600;color:var(--dark);font-family:'Lexend',sans-serif}
+.badge-excl{background:#E8EFF9;color:#1F3A7A;font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;font-family:'Lexend',sans-serif}
+.badge-cons{background:#FFF3E8;color:#7D4E1A;font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;white-space:nowrap;font-family:'Lexend',sans-serif}
+
+/* ICON CARDS — Why Big Apple */
+.icon-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.icon-card{background:#fff;border:1.25px solid var(--border);border-radius:20px;padding:25px;display:flex;gap:14px;align-items:flex-start}
+.icon-circle{width:44px;height:44px;background:var(--orange-tint);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.icon-circle i{font-size:20px;color:var(--orange)}
+.icon-text h3{font-size:14px;margin-bottom:4px}
+.icon-text p{font-size:13px;margin:0}
+
+/* INFO BOXES — What Makes GA Different */
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.info-box{background:#fff;border:1.25px solid var(--border);border-radius:20px;padding:22px;border-top:3px solid var(--orange)}
+.info-box h3{color:var(--blue);font-size:14px;margin-bottom:8px}
+.info-box p{font-size:13px;color:#555}
+
+/* PERSONAS */
+.persona-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.persona-card{background:#fff;border:1.25px solid var(--border);border-radius:20px;padding:22px;display:flex;gap:12px}
+.persona-icon{width:38px;height:38px;background:var(--bg-blue-tint);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.persona-icon i{font-size:18px;color:var(--blue)}
+.persona-text h3{font-size:13px;margin-bottom:4px}
+.persona-text p{font-size:12px;color:#666;margin:0}
+
+/* DESTINATIONS */
+.dest-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.dest-card{background:#fff;border:1.25px solid var(--border);border-radius:20px;overflow:hidden}
+.dest-head{background:var(--bg-blue-tint);padding:12px 18px;display:flex;align-items:center;gap:7px}
+.dest-head h3{font-size:14px;color:var(--blue);margin:0}
+.dest-head i{font-size:14px;color:var(--orange)}
+.dest-body{padding:14px 18px;font-size:13px;color:#555;line-height:1.55}
+
+/* HOW IT WORKS — 3 steps */
+.steps-row{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative;margin-top:8px}
+.step{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 16px;position:relative}
+.step-num{width:46px;height:46px;background:var(--orange);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;font-family:'Lexend',sans-serif;margin-bottom:14px;position:relative;z-index:1}
+.step:not(:last-child)::after{content:'';position:absolute;top:23px;right:-2px;width:calc(100% - 46px - 16px);height:2px;background:#E8EEF8;left:calc(50% + 23px + 8px);width:calc(50% - 23px - 8px + 50% - 23px - 8px)}
+.step h3{font-size:14px;color:var(--blue);margin-bottom:6px}
+.step p{font-size:13px;color:#666}
+.connector{position:absolute;top:22px;left:50%;width:calc(100% - 46px);height:2px;background:#E0E8F5;transform:translateX(23px);z-index:0}
+
+/* FAQ */
+.faq-list details{border-bottom:1px solid var(--border)}
+.faq-list summary{padding:16px 0;font-family:'Lexend',sans-serif;font-size:14px;font-weight:600;color:var(--dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;list-style:none;user-select:none}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:'+';color:var(--orange);font-size:20px;font-weight:400;line-height:1;margin-left:12px;flex-shrink:0}
+.faq-list details[open] summary{color:var(--blue)}
+.faq-list details[open] summary::after{content:'−'}
+.faq-ans{padding:0 0 16px;font-size:13px;color:#555;line-height:1.7}
+details.reverse summary{color:var(--blue)}
+details.reverse{border-left:3px solid var(--blue);padding-left:14px;border-radius:0 0 0 4px}
+
+/* CTA BAND */
+.cta-band{background:var(--orange);padding:52px 60px;text-align:center}
+.cta-band h2{color:#fff;font-size:26px;font-weight:700;margin-bottom:10px}
+.cta-band p{color:rgba(255,255,255,.85);font-size:14px;margin-bottom:20px}
+.cta-chips{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.cta-chip{background:rgba(255,255,255,.2);color:#fff;font-size:12px;padding:4px 13px;border-radius:99px;font-family:'Roboto Condensed',sans-serif}
+.cta-band-btn{display:inline-block;background:#fff;color:var(--orange);border:none;border-radius:55px;padding:14px 36px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Lexend',sans-serif;margin-bottom:12px}
+.cta-phone{color:rgba(255,255,255,.75);font-size:13px}
+
+/* NAV CARDS — Global component */
+.nav-section{background:var(--bg-blue-tint);padding:44px 60px}
+.nav-sec-inner{max-width:880px;margin:0 auto}
+.nav-section h2{text-align:center;margin-bottom:20px}
+.nav-acc{background:#fff;border-radius:20px;overflow:hidden;border:1.25px solid #D0D9EF}
+.nav-acc details{border-bottom:1px solid var(--border)}
+.nav-acc details:last-child{border-bottom:none}
+.nav-acc summary{padding:13px 20px;font-family:'Lexend',sans-serif;font-size:13px;font-weight:600;color:#333;list-style:none;cursor:pointer;user-select:none;display:flex;justify-content:space-between;align-items:center}
+.nav-acc summary::-webkit-details-marker{display:none}
+.nav-acc summary::after{content:'⌄';color:var(--blue);font-size:14px}
+.nav-acc details[open] summary{background:var(--bg-light);color:var(--blue)}
+.nav-acc details[open] summary::after{content:'⌃'}
+.nav-grid{display:grid;grid-template-columns:1fr 1fr;background:#FAFBFF}
+.nav-link-item{padding:10px 20px;font-size:13px;color:var(--blue);font-weight:500;border-bottom:1px solid #F0F0F0;cursor:pointer;font-family:'Roboto Condensed',sans-serif}
+.nav-link-item:hover{background:var(--bg-blue-tint);color:var(--orange)}
+
+/* FOOTER */
+footer{background:#1A1A2E;padding:28px 60px;text-align:center}
+footer p{font-size:12px;color:rgba(255,255,255,.4);font-family:'Roboto Condensed',sans-serif;line-height:1.7}
+footer a{color:rgba(255,255,255,.3);margin:0 10px;font-size:11px}
+
+/* PILL BUTTON */
+.pill-btn{display:inline-flex;align-items:center;gap:7px;background:var(--orange);color:#fff;border:none;border-radius:55px;padding:12px 26px;font-size:14px;font-weight:700;cursor:pointer;font-family:'Lexend',sans-serif;margin-top:4px}
+.pill-btn.secondary{background:var(--navy)}
+</style>
+</head>
+<body>
+
+<!-- MOCKUP BANNER -->
+<div class="mockup-banner">
+  MOCKUP — NOT LIVE &nbsp;|&nbsp; <span>bigapplemoving.com/long-distance-movers/new-york-to-georgia/</span> &nbsp;|&nbsp; Trello #190 &nbsp;|&nbsp; Brief: Doc 1cOSXCgB…
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div style="display:flex;align-items:center;gap:36px">
+    <div class="nav-logo">Big<span>Apple</span></div>
+    <div class="nav-links">
+      <span>About</span><span>Moving</span><span>Moving Location</span><span>Storage</span><span>Services</span>
+    </div>
+  </div>
+  <div class="nav-right">
+    <div class="nav-phone">
+      <strong>CALL US: (212) 365-0707</strong>
+      Everyday 7AM – 8PM
+    </div>
+    <button class="nav-cta">ONLINE ESTIMATE</button>
+  </div>
+</nav>
+
+<!-- HERO — 2-col layout matching live site interior pages -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-badge"><i class="ti ti-map-2"></i> NYC → Georgia Long-Distance Moving</div>
+    <h1>New York to Georgia Movers — Licensed NYC to Atlanta Moving Company</h1>
+    <p class="hero-sub">Licensed NYC interstate mover serving Atlanta, Savannah, and all of Georgia since 1979. Binding estimates. 2–3 day delivery on exclusive service.</p>
+    <div class="qa-box">
+      <div class="qa-label">Quick Answer</div>
+      Moving from NYC to Georgia typically costs <strong>$1,800–$8,000</strong> depending on home size, service level, and destination. Big Apple Moving is a licensed USDOT carrier — we own our trucks and work with designated moving teams. Exclusive transit is 2–3 business days to Atlanta. We pick up from all five NYC boroughs.
+    </div>
+    <div class="form-box">
+      <div class="form-row">
+        <div class="field"><label>Moving From</label><input type="text" value="New York, NY" /></div>
+        <div class="field"><label>Moving To</label><input type="text" placeholder="Atlanta / Savannah / GA Zip" /></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label>Move Date</label><input type="date" /></div>
+        <div class="field"><label>Home Size</label>
+          <select><option>Studio / 1BR</option><option selected>2 Bedroom</option><option>3BR+</option></select>
+        </div>
+      </div>
+      <button class="form-cta">Get My Free Quote →</button>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img-placeholder">
+      <i class="ti ti-map"></i>
+      <span>Hero image — NYC to Atlanta map / movers loading truck</span>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item"><i class="ti ti-calendar"></i><span><strong>45+</strong> Years Experience</span></div>
+    <div class="trust-item"><i class="ti ti-route"></i><span><strong>~870 mi</strong> NYC to Atlanta</span></div>
+    <div class="trust-item"><i class="ti ti-clock"></i><span><strong>2–3 Days</strong> Exclusive Service</span></div>
+    <div class="trust-item"><i class="ti ti-certificate"></i><span><strong>Licensed</strong> USDOT Carrier</span></div>
+    <div class="trust-item"><i class="ti ti-star"></i><span><strong>4.9★</strong> Google Rating</span></div>
+  </div>
+</div>
+
+<!-- SECTION 1 — ROUTE SNAPSHOT -->
+<section class="section">
+  <div class="sec-inner">
+    <div class="section-label">Route Overview</div>
+    <h2>NYC to Georgia — Route at a Glance</h2>
+    <table class="route-table">
+      <tr><td>Distance from NYC</td><td>~870 miles to Atlanta &nbsp;/&nbsp; ~1,000 miles to Savannah</td></tr>
+      <tr><td>Approximate Drive</td><td>~13 hours to Atlanta</td></tr>
+      <tr><td>Transit — Exclusive Truck</td><td>2–3 business days — guaranteed delivery window</td></tr>
+      <tr><td>Transit — Consolidated</td><td>7–14 business days — flexible, lower cost</td></tr>
+      <tr><td>Popular Destinations</td><td>Atlanta (Midtown, Buckhead, Decatur, Sandy Springs), Savannah, Augusta, Alpharetta, Roswell</td></tr>
+      <tr><td>NYC Pickup Areas</td><td>All 5 boroughs + tri-state (NJ, CT)</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- SECTION 2 — PRICING -->
+<section class="section bg-light">
+  <div class="sec-inner">
+    <div class="section-label">Pricing</div>
+    <h2>How Much Does It Cost to Move from NYC to Georgia?</h2>
+    <div class="price-cards">
+      <div class="price-card">
+        <div class="price-size">Studio / 1BR</div>
+        <div class="price-amount">$1,800–$3,500</div>
+        <div class="price-sub">Consolidated or exclusive</div>
+      </div>
+      <div class="price-card featured">
+        <div class="featured-badge">Most common</div>
+        <div class="price-size">2 Bedroom</div>
+        <div class="price-amount">$3,000–$5,500</div>
+        <div class="price-sub">Exclusive recommended</div>
+      </div>
+      <div class="price-card">
+        <div class="price-size">3BR+</div>
+        <div class="price-amount">$4,500–$8,000</div>
+        <div class="price-sub">In-home survey required</div>
+      </div>
+    </div>
+    <p class="pricing-note">Ranges are market-rate estimates and vary by floor access, packing services, and GA destination. For your exact price, request a free binding estimate — price is locked in before we load anything.</p>
+    <button class="pill-btn">Get a Free Quote →</button>
+
+    <h2 style="margin-top:32px">Exclusive vs. Consolidated — Which Is Right for NYC to Georgia?</h2>
+    <table class="comp-table">
+      <thead>
+        <tr><th>Factor</th><th><span class="badge-excl">Exclusive Truck</span></th><th><span class="badge-cons">Consolidated</span></th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Best for</td><td>2BR+, fixed arrival date, high-value items</td><td>Studio/1BR, flexible timeline, budget-first</td></tr>
+        <tr><td>Delivery window</td><td>2–3 business days, guaranteed</td><td>7–14 business days, estimated</td></tr>
+        <tr><td>Truck</td><td>Your belongings only, NYC to Georgia</td><td>Shared load with other customers</td></tr>
+        <tr><td>Best use case</td><td>Corporate transfer, lease start date, family move</td><td>Solo move, flexible schedule, lower budget</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- SECTION 3 — WHY BIG APPLE -->
+<section class="section">
+  <div class="sec-inner">
+    <div class="section-label">Why Choose Us</div>
+    <h2>Why New Yorkers Choose Big Apple for NYC to Georgia Moves</h2>
+    <div class="icon-cards">
+      <div class="icon-card">
+        <div class="icon-circle"><i class="ti ti-truck"></i></div>
+        <div class="icon-text">
+          <h3>Licensed Interstate Carrier</h3>
+          <p>We hold a USDOT number and are fully licensed by the FMCSA. We own our trucks and work with designated moving teams — we do not broker your move to a third party.</p>
+        </div>
+      </div>
+      <div class="icon-card">
+        <div class="icon-circle"><i class="ti ti-file-text"></i></div>
+        <div class="icon-text">
+          <h3>Binding Written Estimates</h3>
+          <p>Your price is confirmed in writing before we load anything. No surprises on delivery day in Atlanta or Savannah — ever.</p>
+        </div>
+      </div>
+      <div class="icon-card">
+        <div class="icon-circle"><i class="ti ti-clock"></i></div>
+        <div class="icon-text">
+          <h3>45+ Years Long-Distance Experience</h3>
+          <p>We've been moving New Yorkers south since 1979. The Southeast corridor — including Georgia — is one of our most established routes.</p>
+        </div>
+      </div>
+      <div class="icon-card">
+        <div class="icon-circle"><i class="ti ti-user"></i></div>
+        <div class="icon-text">
+          <h3>Dedicated Move Coordinator</h3>
+          <p>One point of contact manages your move from survey through Atlanta delivery. Reachable by phone or text throughout transit.</p>
+        </div>
+      </div>
+      <div class="icon-card">
+        <div class="icon-circle"><i class="ti ti-building-warehouse"></i></div>
+        <div class="icon-text">
+          <h3>Storage Available</h3>
+          <p>If your Georgia home isn't ready, we hold your belongings at our NYC facility and deliver to Georgia on your confirmed timeline.</p>
+        </div>
+      </div>
+      <div class="icon-card">
+        <div class="icon-circle"><i class="ti ti-shield-check"></i></div>
+        <div class="icon-text">
+          <h3>Full Replacement Value Protection</h3>
+          <p>Your belongings are covered at full replacement value — not depreciated value — from NYC pickup through Georgia delivery.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 — WHAT MAKES NYC→GA DIFFERENT -->
+<section class="section bg-light">
+  <div class="sec-inner">
+    <div class="section-label">Route Intelligence</div>
+    <h2>What Makes Moving from NYC to Georgia Different</h2>
+    <div class="info-grid">
+      <div class="info-box">
+        <h3>Atlanta's Traffic & Delivery Logistics</h3>
+        <p>Atlanta has some of the most congested highways in the Southeast — I-285 and I-75/I-85 through downtown require careful delivery scheduling. Midtown and Buckhead high-rises often require advance elevator reservations and loading dock coordination. We handle all of this before the truck leaves NYC.</p>
+      </div>
+      <div class="info-box">
+        <h3>Georgia's Climate & Packing Standards</h3>
+        <p>Georgia has high humidity and heat for much of the year. Electronics, hardwood furniture, artwork, and wine are vulnerable to temperature changes during transit. We use appropriate packing materials and protection for this corridor.</p>
+      </div>
+      <div class="info-box">
+        <h3>Atlanta's Fast-Moving Real Estate Market</h3>
+        <p>Atlanta's rental and real estate market moves quickly — closing dates and lease start dates are often firm. Our 2–3 day exclusive delivery window gives you a reliable date to plan backward from.</p>
+      </div>
+      <div class="info-box">
+        <h3>High Corporate Relocation Demand</h3>
+        <p>Atlanta is home to Delta Air Lines, Coca-Cola, CNN, NCR, and a fast-growing tech sector. NYC professionals on corporate transfers often need coordinated delivery with building access requirements at both ends — something we handle routinely.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5 — WHO MOVES -->
+<section class="section">
+  <div class="sec-inner">
+    <div class="section-label">Who We Serve</div>
+    <h2>Who Typically Moves from NYC to Georgia?</h2>
+    <div class="persona-grid">
+      <div class="persona-card">
+        <div class="persona-icon"><i class="ti ti-device-laptop"></i></div>
+        <div class="persona-text">
+          <h3>Tech & Media Professionals</h3>
+          <p>Atlanta's tech scene (Georgia Tech, NCR, Mailchimp) and media industry (CNN, Tyler Perry Studios) draw a consistent stream of NYC professionals making the move south.</p>
+        </div>
+      </div>
+      <div class="persona-card">
+        <div class="persona-icon"><i class="ti ti-home"></i></div>
+        <div class="persona-text">
+          <h3>Families Seeking Space & Lower COL</h3>
+          <p>The most common profile — families leaving Brooklyn, Queens, or NYC suburbs for more space, better schools, and lower property taxes in Alpharetta, Roswell, or Johns Creek.</p>
+        </div>
+      </div>
+      <div class="persona-card">
+        <div class="persona-icon"><i class="ti ti-beach"></i></div>
+        <div class="persona-text">
+          <h3>Retirees & Remote Workers</h3>
+          <p>Georgia has no state income tax on retirement income and a significantly lower cost of living. Remote workers and retirees from NYC are an increasingly large share of this corridor.</p>
+        </div>
+      </div>
+      <div class="persona-card">
+        <div class="persona-icon"><i class="ti ti-building"></i></div>
+        <div class="persona-text">
+          <h3>Corporate Transfers</h3>
+          <p>Delta, Coca-Cola, Cox Media, and Home Depot regularly move employees from NYC to Atlanta. We coordinate directly with corporate relocation programs and HR departments.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6 — POPULAR DESTINATIONS -->
+<section class="section bg-light">
+  <div class="sec-inner">
+    <div class="section-label">Georgia Destinations</div>
+    <h2>We Move to All of Georgia</h2>
+    <div class="dest-grid">
+      <div class="dest-card">
+        <div class="dest-head"><i class="ti ti-map-pin"></i><h3>NYC to Atlanta Movers</h3></div>
+        <div class="dest-body">Our primary Georgia destination. We serve Midtown, Buckhead, Inman Park, Old Fourth Ward, Virginia-Highland, and East Atlanta Village — plus suburbs including Decatur, Sandy Springs, Alpharetta, Marietta, and Smyrna. Atlanta high-rises require elevator reservations and loading dock coordination — we handle this before the truck leaves NYC.</div>
+      </div>
+      <div class="dest-card">
+        <div class="dest-head"><i class="ti ti-map-pin"></i><h3>NYC to Savannah Movers</h3></div>
+        <div class="dest-body">A fast-growing destination for NYC creatives, retirees, and remote workers. We deliver to the Historic District, Ardsley Park, Midtown Savannah, and surrounding communities. Savannah has strict parking rules for large vehicles — our team coordinates access in advance.</div>
+      </div>
+      <div class="dest-card">
+        <div class="dest-head"><i class="ti ti-map-pin"></i><h3>NYC to Alpharetta Movers</h3></div>
+        <div class="dest-body">One of Atlanta's most popular suburbs for tech and corporate relocations. Dense concentration of tech campuses (Microsoft, NCR, Salesforce offices) and newer gated communities with specific truck access requirements we handle ahead of time.</div>
+      </div>
+      <div class="dest-card">
+        <div class="dest-head"><i class="ti ti-map-pin"></i><h3>NYC to Roswell & Johns Creek</h3></div>
+        <div class="dest-body">Top destinations for NYC families relocating to metro Atlanta. Excellent school districts, lower density, and more square footage than the city — consistently the profile of families leaving Brooklyn, Queens, and Westchester.</div>
+      </div>
+      <div class="dest-card">
+        <div class="dest-head"><i class="ti ti-map-pin"></i><h3>NYC to Augusta Movers</h3></div>
+        <div class="dest-body">A smaller but steady corridor. We serve Augusta's Medical District and surrounding neighborhoods for healthcare professionals and families relocating from NYC. Ask about delivery scheduling for the Augusta area.</div>
+      </div>
+      <div class="dest-card">
+        <div class="dest-head"><i class="ti ti-plus"></i><h3>All of Georgia</h3></div>
+        <div class="dest-body">Columbus, Macon, Athens, Gainesville, Valdosta, and anywhere else in Georgia. If you have a Georgia zip code, we service it. Get a free quote for your specific destination — pricing is based on distance, size, and access.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7 — HOW IT WORKS -->
+<section class="section">
+  <div class="sec-inner">
+    <div class="section-label">Process</div>
+    <h2>How Your NYC to Georgia Move Works</h2>
+    <div class="steps-row">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Free Quote & Binding Estimate</h3>
+        <p>Share your NYC pickup address, Georgia destination, and move size. We provide a written binding estimate — price locked before we load anything.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Pack & Load in NYC</h3>
+        <p>Our NYC crew handles wrapping, furniture protection, and loading on move day. We coordinate building access, elevator bookings, and parking on both ends.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>2–3 Day Delivery to Georgia</h3>
+        <p>Your belongings arrive in Georgia in 2–3 business days with exclusive service. We provide a confirmed delivery window before departing NYC — no guessing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 8 — FAQ -->
+<section class="section bg-light">
+  <div class="sec-inner">
+    <div class="section-label">FAQ</div>
+    <h2>NYC to Georgia Moving — FAQ</h2>
+    <div class="faq-list">
+      <details open>
+        <summary>How much does it cost to move from NYC to Georgia?</summary>
+        <div class="faq-ans">Studio and 1BR moves typically start around $1,800; 2–3BR moves run $3,000–$5,500; larger homes start at $4,500+. These ranges vary based on floor access, service level, packing services, and Georgia destination. Get a free binding estimate for your exact price.</div>
+      </details>
+      <details>
+        <summary>How long does a move from NYC to Georgia take?</summary>
+        <div class="faq-ans">With exclusive (dedicated truck) service: 2–3 business days to Atlanta — we confirm a guaranteed delivery window before departing NYC. With consolidated service: 7–14 business days. Delivery windows are confirmed in writing before the truck leaves.</div>
+      </details>
+      <details>
+        <summary>Do you move to Atlanta specifically?</summary>
+        <div class="faq-ans">Yes — Atlanta is our primary Georgia destination. We serve all Atlanta neighborhoods (Midtown, Buckhead, Inman Park, Old Fourth Ward) and suburbs including Decatur, Sandy Springs, Alpharetta, Marietta, Roswell, and Johns Creek.</div>
+      </details>
+      <details>
+        <summary>Do you offer packing services for NYC to Georgia moves?</summary>
+        <div class="faq-ans">Yes — full packing, partial packing, and specialty packing (fine art, electronics, wine) are all available. For a mid-distance move through multiple climate zones, professional packing significantly reduces the risk of humidity and heat damage.</div>
+      </details>
+      <details>
+        <summary>Can you store my belongings if my Georgia home isn't ready?</summary>
+        <div class="faq-ans">Yes — we offer storage-in-transit at our NYC facility. We hold your shipment and deliver to Georgia on your confirmed timeline. No need to scramble for short-term Georgia storage on arrival.</div>
+      </details>
+      <details>
+        <summary>Do you pick up from all NYC boroughs?</summary>
+        <div class="faq-ans">Yes — Manhattan, Brooklyn, Queens, the Bronx, Staten Island, and throughout the tri-state area including New Jersey and Connecticut. We coordinate building access and parking permits for NYC pickups across all boroughs.</div>
+      </details>
+      <details class="reverse">
+        <summary>Do you also move from Georgia to New York?</summary>
+        <div class="faq-ans">Yes. Big Apple Moving handles moves in both directions. Whether you're moving from Atlanta, Savannah, or elsewhere in Georgia back to NYC, we provide the same licensed interstate service, binding estimates, and dedicated truck options. Request a reverse-route quote at bigapplemoving.com.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <h2>Moving to Georgia? Get Your Free NYC to GA Quote.</h2>
+  <div class="cta-chips">
+    <span class="cta-chip">Licensed USDOT Carrier</span>
+    <span class="cta-chip">Binding Estimates</span>
+    <span class="cta-chip">2–3 Day Atlanta Delivery</span>
+    <span class="cta-chip">All NYC Boroughs</span>
+    <span class="cta-chip">45+ Years Experience</span>
+  </div>
+  <button class="cta-band-btn">GET A FREE QUOTE →</button>
+  <div class="cta-phone">Or call us: (212) 365-0707 &nbsp;·&nbsp; Everyday 7AM – 8PM</div>
+</div>
+
+<!-- NAV CARDS — GLOBAL COMPONENT -->
+<div class="nav-section">
+  <div class="nav-sec-inner">
+    <h2>Movers Serving All of New York</h2>
+    <div class="nav-acc">
+      <details open>
+        <summary>Long Distance Movers</summary>
+        <div class="nav-grid">
+          <div class="nav-link-item">NYC to Georgia</div>
+          <div class="nav-link-item">NYC to Florida</div>
+          <div class="nav-link-item">NYC to Washington DC</div>
+          <div class="nav-link-item">NYC to California</div>
+          <div class="nav-link-item">NYC to New Jersey</div>
+          <div class="nav-link-item">NYC to Texas</div>
+          <div class="nav-link-item">Interstate Movers NYC</div>
+          <div class="nav-link-item">All Long Distance Routes →</div>
+        </div>
+      </details>
+      <details>
+        <summary>Manhattan Movers</summary>
+        <div class="nav-grid">
+          <div class="nav-link-item">Upper East Side</div>
+          <div class="nav-link-item">Upper West Side</div>
+          <div class="nav-link-item">Midtown</div>
+          <div class="nav-link-item">Hell's Kitchen</div>
+          <div class="nav-link-item">Downtown / FiDi</div>
+          <div class="nav-link-item">All Manhattan →</div>
+        </div>
+      </details>
+      <details>
+        <summary>Brooklyn Movers</summary>
+        <div class="nav-grid">
+          <div class="nav-link-item">Williamsburg</div>
+          <div class="nav-link-item">Park Slope</div>
+          <div class="nav-link-item">DUMBO</div>
+          <div class="nav-link-item">Flatbush</div>
+          <div class="nav-link-item">Bay Ridge</div>
+          <div class="nav-link-item">All Brooklyn →</div>
+        </div>
+      </details>
+      <details>
+        <summary>Queens &amp; Bronx Movers</summary>
+        <div class="nav-grid">
+          <div class="nav-link-item">Astoria</div>
+          <div class="nav-link-item">Long Island City</div>
+          <div class="nav-link-item">Flushing</div>
+          <div class="nav-link-item">Forest Hills</div>
+          <div class="nav-link-item">Riverdale</div>
+          <div class="nav-link-item">All Boroughs →</div>
+        </div>
+      </details>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Big Apple Moving &amp; Storage. Licensed Interstate Carrier. USDOT Registered. All rights reserved.</p>
+  <p style="margin-top:6px"><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">FMCSA Rights</a><a href="#">Sitemap</a></p>
+</footer>
+
+</body>
+</html>

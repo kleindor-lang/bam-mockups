@@ -8,3 +8,523 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Roboto+Condensed:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+<style>
+/* ====================================================
+   BAM DESIGN SYSTEM — from live site inspection
+   bigapplemoving.com — June 2026
+   Orange: #E05931 | H2 Blue: #3B58A8 | White bg: #FFFFFF
+   Headings: Lexend | Body: Roboto Condensed
+   Cards: border-radius 20px, border 1.25px solid #F1F1F1
+   Buttons: border-radius 55px (pill)
+   ==================================================== */
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --orange:#E05931;
+  --blue:#3B58A8;
+  --navy:#1F2D6B;
+  --dark:#222222;
+  --body:#333333;
+  --muted:#666;
+  --white:#fff;
+  --border:#F1F1F1;
+  --bg-light:#F7F5F2;
+  --bg-blue-tint:#EEF1FA;
+  --orange-tint:#FEE8E0;
+}
+body{font-family:'Roboto Condensed',sans-serif;font-size:15px;color:var(--body);background:#fff;line-height:1.55}
+h1,h2,h3,h4{font-family:'Lexend',sans-serif}
+h1{color:var(--orange);font-size:34px;font-weight:700;line-height:1.2}
+h2{color:var(--blue);font-size:28px;font-weight:700;line-height:1.25;margin-bottom:14px}
+h3{color:var(--dark);font-size:16px;font-weight:700;margin-bottom:5px}
+p{font-size:14px;color:#555;line-height:1.65;margin-bottom:10px}
+p:last-child{margin-bottom:0}
+
+/* MOCKUP BANNER */
+.mockup-banner{background:var(--navy);color:#fff;text-align:center;padding:9px 16px;font-family:'Roboto Condensed',sans-serif;font-size:11px;font-weight:600;letter-spacing:.06em}
+.mockup-banner span{background:rgba(255,255,255,.15);padding:2px 9px;border-radius:3px;margin:0 5px}
+.new-pill{background:#27AE60;color:#fff;font-size:10px;font-weight:700;padding:2px 9px;border-radius:4px;margin-left:6px;font-family:'Lexend',sans-serif}
+
+/* NAV */
+.nav{background:#fff;border-bottom:1px solid #EFEFEF;padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:80px;position:sticky;top:0;z-index:100}
+.nav-logo{font-family:'Lexend',sans-serif;font-size:22px;font-weight:700;color:var(--orange)}
+.nav-logo em{color:var(--dark);font-style:normal}
+.nav-links{display:flex;gap:28px;font-size:13px;font-weight:500;color:#444}
+.nav-right{display:flex;align-items:center;gap:12px}
+.nav-phone{font-size:12px;color:#555;line-height:1.3;text-align:right}
+.nav-phone strong{display:block;font-size:14px;color:var(--dark)}
+.nav-cta{background:var(--orange);color:#fff;border:none;border-radius:55px;padding:10px 20px;font-family:'Lexend',sans-serif;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap}
+
+/* HERO — 2-col */
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:420px;border-bottom:1px solid #F0F0F0}
+.hero-left{padding:48px 40px 48px 60px;display:flex;flex-direction:column;justify-content:center}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--orange-tint);color:var(--orange);font-size:11px;font-weight:700;padding:4px 12px;border-radius:99px;margin-bottom:14px;font-family:'Lexend',sans-serif}
+.hero-sub{font-size:15px;color:#555;margin:14px 0 24px;line-height:1.7;max-width:480px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.pill-btn{display:inline-flex;align-items:center;gap:7px;background:var(--orange);color:#fff;border:none;border-radius:55px;padding:12px 26px;font-size:14px;font-weight:700;cursor:pointer;font-family:'Lexend',sans-serif}
+.pill-btn-ghost{display:inline-flex;align-items:center;gap:7px;background:transparent;color:var(--blue);border:2px solid var(--blue);border-radius:55px;padding:10px 24px;font-size:14px;font-weight:700;cursor:pointer;font-family:'Lexend',sans-serif}
+.hero-right{background:var(--bg-light);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.hero-img-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:40px}
+.hero-img-placeholder i{font-size:56px;color:#CCC}
+.hero-img-placeholder span{font-size:12px;color:#bbb;font-family:'Roboto Condensed',sans-serif;text-align:center}
+.hero-img-note{position:absolute;bottom:16px;left:0;right:0;text-align:center;font-size:11px;color:#999;font-family:'Roboto Condensed',sans-serif;background:rgba(255,255,255,.8);padding:5px}
+
+/* TRUST BAR */
+.trust-bar{background:var(--navy);padding:16px 60px}
+.trust-inner{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;max-width:940px;margin:0 auto}
+.trust-item{display:flex;align-items:center;gap:8px;color:#fff}
+.trust-item i{font-size:16px;color:rgba(255,255,255,.6)}
+.trust-item span{font-size:13px;font-family:'Roboto Condensed',sans-serif}
+.trust-item strong{font-family:'Lexend',sans-serif;font-weight:700}
+
+/* SECTIONS */
+.section{padding:52px 60px}
+.section.alt{background:var(--bg-light)}
+.section.blue-tint{background:var(--bg-blue-tint)}
+.sec-inner{max-width:900px;margin:0 auto}
+.sec-label{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--orange);text-transform:uppercase;margin-bottom:8px;font-family:'Lexend',sans-serif}
+
+/* WHO WE ARE — 2-col text + image */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.two-col-text p{font-size:14px;line-height:1.75;color:#555;margin-bottom:12px}
+.two-col-text p:last-child{margin-bottom:0}
+.img-block{background:var(--bg-light);border-radius:20px;min-height:280px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;border:1.25px solid var(--border)}
+.img-block i{font-size:40px;color:#CCC}
+.img-block span{font-size:11px;color:#bbb;font-family:'Roboto Condensed',sans-serif;text-align:center;padding:0 20px}
+
+/* HOW WE HIRE / TRAIN — step cards */
+.step-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:6px}
+.step-card{background:#fff;border:1.25px solid var(--border);border-radius:20px;padding:26px;display:flex;gap:16px;align-items:flex-start}
+.step-num{width:40px;height:40px;background:var(--orange-tint);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Lexend',sans-serif;font-weight:700;font-size:16px;color:var(--orange);flex-shrink:0}
+.step-text h3{font-size:14px;color:var(--dark);margin-bottom:5px}
+.step-text p{font-size:13px;color:#666;margin:0;line-height:1.6}
+
+/* MEET THE TEAM — mover cards */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.mover-card{background:#fff;border:1.25px solid var(--border);border-radius:20px;overflow:hidden;text-align:center}
+.mover-photo{background:var(--bg-light);height:160px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;border-bottom:1.25px solid var(--border)}
+.mover-photo i{font-size:44px;color:#CCC}
+.mover-photo span{font-size:10px;color:#bbb;font-family:'Roboto Condensed',sans-serif}
+.mover-info{padding:16px}
+.mover-name{font-family:'Lexend',sans-serif;font-weight:700;font-size:14px;color:var(--dark);margin-bottom:3px}
+.mover-years{font-size:12px;color:var(--orange);font-family:'Roboto Condensed',sans-serif;font-weight:600}
+.mover-tag{font-size:11px;color:#999;margin-top:4px;font-family:'Roboto Condensed',sans-serif}
+
+/* STATS BLOCK — if no photos available */
+.stats-fallback{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:6px}
+.stat-box{background:#fff;border:1.25px solid var(--border);border-radius:20px;padding:28px 20px;text-align:center}
+.stat-num{font-family:'Lexend',sans-serif;font-size:36px;font-weight:700;color:var(--orange);line-height:1}
+.stat-label{font-size:12px;color:#777;margin-top:6px;font-family:'Roboto Condensed',sans-serif;line-height:1.4}
+
+/* TRUST REASONS */
+.trust-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.trust-card{background:#fff;border:1.25px solid var(--border);border-radius:20px;padding:24px;border-top:3px solid var(--orange);display:flex;gap:14px}
+.trust-icon{width:42px;height:42px;background:var(--orange-tint);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.trust-icon i{font-size:20px;color:var(--orange)}
+.trust-card-text h3{font-size:14px;margin-bottom:5px;color:var(--dark)}
+.trust-card-text p{font-size:13px;color:#666;margin:0;line-height:1.6}
+
+/* QUOTE HIGHLIGHT */
+.quote-band{background:var(--bg-blue-tint);border-left:4px solid var(--blue);border-radius:0 16px 16px 0;padding:20px 24px;margin:32px 0}
+.quote-band p{font-family:'Lexend',sans-serif;font-size:16px;font-style:italic;color:var(--blue);margin:0;line-height:1.6}
+.quote-band cite{display:block;font-size:12px;color:#888;margin-top:8px;font-family:'Roboto Condensed',sans-serif;font-style:normal}
+
+/* CTA BAND */
+.cta-band{background:var(--orange);padding:52px 60px;text-align:center}
+.cta-band h2{color:#fff;font-size:26px;font-weight:700;margin-bottom:10px}
+.cta-band p{color:rgba(255,255,255,.85);font-size:14px;margin-bottom:22px}
+.cta-band-btn{display:inline-block;background:#fff;color:var(--orange);border:none;border-radius:55px;padding:14px 36px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Lexend',sans-serif;margin-bottom:12px}
+.cta-phone{color:rgba(255,255,255,.75);font-size:13px}
+
+/* BREADCRUMB */
+.breadcrumb{padding:10px 60px;font-size:12px;color:#999;font-family:'Roboto Condensed',sans-serif;border-bottom:1px solid #F5F5F5}
+.breadcrumb a{color:#999}
+.breadcrumb span{color:#555;margin:0 5px}
+
+/* NAV CARDS */
+.nav-section{background:var(--bg-blue-tint);padding:44px 60px}
+.nav-sec-inner{max-width:900px;margin:0 auto}
+.nav-section h2{text-align:center;margin-bottom:20px}
+.nav-acc{background:#fff;border-radius:20px;overflow:hidden;border:1.25px solid #D0D9EF}
+.nav-acc details{border-bottom:1px solid var(--border)}
+.nav-acc details:last-child{border-bottom:none}
+.nav-acc summary{padding:13px 20px;font-family:'Lexend',sans-serif;font-size:13px;font-weight:600;color:#333;list-style:none;cursor:pointer;user-select:none;display:flex;justify-content:space-between;align-items:center}
+.nav-acc summary::-webkit-details-marker{display:none}
+.nav-acc summary::after{content:'⌄';color:var(--blue);font-size:14px}
+.nav-acc details[open] summary{background:var(--bg-light);color:var(--blue)}
+.nav-acc details[open] summary::after{content:'⌃'}
+.nav-grid{display:grid;grid-template-columns:1fr 1fr;background:#FAFBFF}
+.nav-link-item{padding:10px 20px;font-size:13px;color:var(--blue);font-weight:500;border-bottom:1px solid #F0F0F0;cursor:pointer;font-family:'Roboto Condensed',sans-serif}
+
+/* FOOTER */
+footer{background:#1A1A2E;padding:28px 60px;text-align:center}
+footer p{font-size:12px;color:rgba(255,255,255,.4);font-family:'Roboto Condensed',sans-serif;line-height:1.7}
+footer a{color:rgba(255,255,255,.3);margin:0 10px;font-size:11px}
+</style>
+</head>
+<body>
+
+<!-- MOCKUP BANNER -->
+<div class="mockup-banner">
+  MOCKUP — NOT LIVE &nbsp;|&nbsp; <span>bigapplemoving.com/our-movers/</span> &nbsp;|&nbsp; Trello #196 <span class="new-pill">NEW PAGE</span>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div style="display:flex;align-items:center;gap:36px">
+    <div class="nav-logo">Big<em>Apple</em></div>
+    <div class="nav-links">
+      <span>About</span><span>Moving</span><span>Moving Location</span><span>Storage</span><span>Services</span>
+    </div>
+  </div>
+  <div class="nav-right">
+    <div class="nav-phone"><strong>CALL US: (212) 365-0707</strong>Everyday 7AM – 8PM</div>
+    <button class="nav-cta">ONLINE ESTIMATE</button>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="#">Home</a><span>›</span><a href="#">About</a><span>›</span>Our Movers
+</div>
+
+<!-- HERO — 2-col -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-badge"><i class="ti ti-users"></i> NYC's Professional Moving Team</div>
+    <h1>Meet the Big Apple Moving Team — NYC's Professional Movers Since 1979</h1>
+    <p class="hero-sub">We know what matters most before you let a moving company into your home: who is actually showing up? Here's everything you need to know about the BAM team.</p>
+    <div class="hero-actions">
+      <button class="pill-btn">Get a Free Quote →</button>
+      <button class="pill-btn-ghost"><i class="ti ti-phone"></i> (212) 365-0707</button>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img-placeholder">
+      <i class="ti ti-users-group"></i>
+      <span>Hero image — BAM crew in branded shirts,<br>candid / natural, NOT stock</span>
+    </div>
+    <div class="hero-img-note">⚠️ Real crew photos required — Dor to provide before publishing</div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item"><i class="ti ti-calendar"></i><span><strong>45+</strong> Years in NYC</span></div>
+    <div class="trust-item"><i class="ti ti-shield-check"></i><span><strong>Licensed</strong> & Insured</span></div>
+    <div class="trust-item"><i class="ti ti-id-badge"></i><span><strong>Background</strong> Checked</span></div>
+    <div class="trust-item"><i class="ti ti-star"></i><span><strong>4.9★</strong> Google Rating</span></div>
+    <div class="trust-item"><i class="ti ti-truck"></i><span><strong>Own</strong> Our Trucks</span></div>
+  </div>
+</div>
+
+<!-- WHO WE ARE -->
+<section class="section">
+  <div class="sec-inner">
+    <div class="two-col">
+      <div class="two-col-text">
+        <div class="sec-label">Who We Are</div>
+        <h2>A Family-Run NYC Moving Company — 45 Years in the Making</h2>
+        <p>Big Apple Moving has been part of New York City since 1979. What started as a small operation has grown into one of NYC's most trusted moving companies — but the fundamentals haven't changed: we own our trucks and work with designated moving teams directly, so you know exactly who is handling your move.</p>
+        <p>We are not a broker. We don't hand your job off to an unknown crew at the last minute. When you book with Big Apple Moving, the same team that shows up at your door is the team we stand behind.</p>
+        <p>Over 45 years, we've completed tens of thousands of NYC moves — from fifth-floor walkups in the West Village to white-glove moves in Tribeca, and long-distance runs to every corner of the country.</p>
+      </div>
+      <div class="img-block">
+        <i class="ti ti-building-skyscraper"></i>
+        <span>Photo: BAM truck on NYC street / team at work<br>candid, branded shirts, real crew</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE HIRE -->
+<section class="section alt">
+  <div class="sec-inner">
+    <div class="sec-label">Our Hiring Process</div>
+    <h2>How We Hire — Who Makes the BAM Team</h2>
+    <p style="margin-bottom:24px;max-width:680px">Not everyone makes it onto a Big Apple Moving crew. We take hiring seriously because we're sending people into your home.</p>
+    <div class="step-cards">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          <h3>Background Check</h3>
+          <p>Every mover on our team undergoes a thorough background check before their first job. No exceptions — this applies to every crew member, regardless of experience level.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          <h3>Reference Verification</h3>
+          <p>We verify work history and professional references before hiring. We look for people with a track record of reliability, care, and professionalism.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          <h3>Experience Requirements</h3>
+          <p>Our movers bring hands-on moving experience before joining BAM. NYC moving — with its elevators, tight stairwells, and parking constraints — requires specific know-how.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div class="step-text">
+          <h3>Ongoing Performance Review</h3>
+          <p>Our movers are rated on every job based on customer feedback, care with belongings, and professionalism. We keep our standards high by holding the whole team to them.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE TRAIN -->
+<section class="section">
+  <div class="sec-inner">
+    <div class="two-col" style="gap:48px">
+      <div>
+        <div class="sec-label">Training</div>
+        <h2>How We Train — Built for NYC</h2>
+        <p>NYC moving isn't like moving anywhere else. Our team is trained specifically for the challenges of New York: tight hallways, doormen and building managers, Certificate of Insurance requirements, elevator reservations, and the general intensity of city logistics.</p>
+        <div class="step-cards" style="grid-template-columns:1fr;margin-top:20px">
+          <div class="step-card">
+            <div class="step-num" style="width:36px;height:36px;font-size:14px">✓</div>
+            <div class="step-text">
+              <h3>Furniture Wrapping & Protection</h3>
+              <p>Every piece of furniture is wrapped before it moves — floors included. Our training covers blanket wrapping, mattress bags, and custom packing for fragile items.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num" style="width:36px;height:36px;font-size:14px">✓</div>
+            <div class="step-text">
+              <h3>Building Navigation & COI Coordination</h3>
+              <p>We know how NYC buildings work — elevator reservations, loading dock access, building manager sign-offs, and COI submission. Handled before the truck arrives.</p>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-num" style="width:36px;height:36px;font-size:14px">✓</div>
+            <div class="step-text">
+              <h3>Long-Distance Packing Standards</h3>
+              <p>For interstate moves, our training covers additional protection layers — custom crating, climate-sensitive packing, and securing loads for cross-country transit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="img-block" style="min-height:360px">
+        <i class="ti ti-package"></i>
+        <span>Photo: mover wrapping furniture in NYC apartment<br>real crew, branded gear, natural lighting</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEET THE TEAM -->
+<section class="section alt">
+  <div class="sec-inner">
+    <div class="sec-label">The Team</div>
+    <h2>Meet Some of Our Movers</h2>
+    <p style="margin-bottom:24px;max-width:640px">These are the people who show up at your door. Real faces, real names, real experience.</p>
+    <div class="team-grid">
+      <div class="mover-card">
+        <div class="mover-photo">
+          <i class="ti ti-user-circle"></i>
+          <span>Real crew photo here</span>
+        </div>
+        <div class="mover-info">
+          <div class="mover-name">Carlos M.</div>
+          <div class="mover-years">12 Years with BAM</div>
+          <div class="mover-tag">Long Distance Specialist</div>
+        </div>
+      </div>
+      <div class="mover-card">
+        <div class="mover-photo">
+          <i class="ti ti-user-circle"></i>
+          <span>Real crew photo here</span>
+        </div>
+        <div class="mover-info">
+          <div class="mover-name">Marcus T.</div>
+          <div class="mover-years">8 Years with BAM</div>
+          <div class="mover-tag">Manhattan & Brooklyn Expert</div>
+        </div>
+      </div>
+      <div class="mover-card">
+        <div class="mover-photo">
+          <i class="ti ti-user-circle"></i>
+          <span>Real crew photo here</span>
+        </div>
+        <div class="mover-info">
+          <div class="mover-name">David R.</div>
+          <div class="mover-years">6 Years with BAM</div>
+          <div class="mover-tag">Fine Art & Piano Moves</div>
+        </div>
+      </div>
+      <div class="mover-card">
+        <div class="mover-photo">
+          <i class="ti ti-user-circle"></i>
+          <span>Real crew photo here</span>
+        </div>
+        <div class="mover-info">
+          <div class="mover-name">James K.</div>
+          <div class="mover-years">10 Years with BAM</div>
+          <div class="mover-tag">Commercial Moves</div>
+        </div>
+      </div>
+      <div class="mover-card">
+        <div class="mover-photo">
+          <i class="ti ti-user-circle"></i>
+          <span>Real crew photo here</span>
+        </div>
+        <div class="mover-info">
+          <div class="mover-name">Anthony P.</div>
+          <div class="mover-years">5 Years with BAM</div>
+          <div class="mover-tag">Packing Specialist</div>
+        </div>
+      </div>
+      <div class="mover-card">
+        <div class="mover-photo">
+          <i class="ti ti-user-circle"></i>
+          <span>Real crew photo here</span>
+        </div>
+        <div class="mover-info">
+          <div class="mover-name">Kevin S.</div>
+          <div class="mover-years">7 Years with BAM</div>
+          <div class="mover-tag">Queens & The Bronx</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATS FALLBACK — shown if no photos available -->
+    <div style="margin-top:36px;padding-top:32px;border-top:1px solid var(--border)">
+      <p style="text-align:center;font-size:13px;color:#999;margin-bottom:20px;font-style:italic">⚠️ If real crew photos are not available at launch, replace the cards above with this stats block:</p>
+      <div class="stats-fallback">
+        <div class="stat-box">
+          <div class="stat-num">45+</div>
+          <div class="stat-label">Years in the NYC Moving Business</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">30+</div>
+          <div class="stat-label">Movers on Our Team</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">8 yrs</div>
+          <div class="stat-label">Average Tenure with BAM</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">50K+</div>
+          <div class="stat-label">NYC Moves Completed</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY OUR MOVERS ARE DIFFERENT -->
+<section class="section blue-tint">
+  <div class="sec-inner">
+    <div class="sec-label">What Sets Us Apart</div>
+    <h2>Why BAM Movers Are Different</h2>
+    <div class="trust-grid">
+      <div class="trust-card">
+        <div class="trust-icon"><i class="ti ti-id-badge-2"></i></div>
+        <div class="trust-card-text">
+          <h3>Background-Checked, Every Single Mover</h3>
+          <p>No exceptions. Every person on a BAM crew has been vetted before their first job. You know who's coming through your door.</p>
+        </div>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon"><i class="ti ti-truck"></i></div>
+        <div class="trust-card-text">
+          <h3>We Own Our Trucks</h3>
+          <p>BAM owns its fleet. We don't rent equipment from unknown third parties — our trucks are maintained, branded, and ready. What you book is what shows up.</p>
+        </div>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon"><i class="ti ti-school"></i></div>
+        <div class="trust-card-text">
+          <h3>NYC-Specific Training</h3>
+          <p>Our team is trained for the specific challenges of NYC: COIs, elevator reservations, tight stairwells, loading dock rules, and building management requirements.</p>
+        </div>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon"><i class="ti ti-star"></i></div>
+        <div class="trust-card-text">
+          <h3>Accountability on Every Job</h3>
+          <p>Our movers are reviewed after every move. We use customer feedback to maintain standards across the whole team — not just the crews you hear about.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote-band">
+      <p>"I was nervous about who would show up. The BAM crew was professional from the moment they arrived — careful with my furniture, respectful of my apartment, and done ahead of schedule."</p>
+      <cite>— Sarah M., Upper West Side to Williamsburg</cite>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <h2>Ready to Meet Your Movers?</h2>
+  <p>Get a free quote in 60 seconds — no commitment required.</p>
+  <button class="cta-band-btn">GET A FREE QUOTE →</button>
+  <div class="cta-phone">Or call us: (212) 365-0707 &nbsp;·&nbsp; Everyday 7AM – 8PM</div>
+</div>
+
+<!-- NAV CARDS — Global Component -->
+<div class="nav-section">
+  <div class="nav-sec-inner">
+    <h2>Movers Serving All of New York</h2>
+    <div class="nav-acc">
+      <details open>
+        <summary>Long Distance Movers</summary>
+        <div class="nav-grid">
+          <div class="nav-link-item">NYC to Texas</div>
+          <div class="nav-link-item">NYC to Florida</div>
+          <div class="nav-link-item">NYC to Washington DC</div>
+          <div class="nav-link-item">NYC to California</div>
+          <div class="nav-link-item">NYC to Georgia</div>
+          <div class="nav-link-item">All Long Distance Routes →</div>
+        </div>
+      </details>
+      <details>
+        <summary>Manhattan Movers</summary>
+        <div class="nav-grid">
+          <div class="nav-link-item">Upper East Side</div>
+          <div class="nav-link-item">Upper West Side</div>
+          <div class="nav-link-item">Midtown</div>
+          <div class="nav-link-item">Hell's Kitchen</div>
+          <div class="nav-link-item">Downtown / FiDi</div>
+          <div class="nav-link-item">All Manhattan →</div>
+        </div>
+      </details>
+      <details>
+        <summary>Brooklyn Movers</summary>
+        <div class="nav-grid">
+          <div class="nav-link-item">Williamsburg</div>
+          <div class="nav-link-item">Park Slope</div>
+          <div class="nav-link-item">DUMBO</div>
+          <div class="nav-link-item">Flatbush</div>
+          <div class="nav-link-item">Bay Ridge</div>
+          <div class="nav-link-item">All Brooklyn →</div>
+        </div>
+      </details>
+      <details>
+        <summary>Queens &amp; Bronx Movers</summary>
+        <div class="nav-grid">
+          <div class="nav-link-item">Astoria</div>
+          <div class="nav-link-item">Long Island City</div>
+          <div class="nav-link-item">Flushing</div>
+          <div class="nav-link-item">Forest Hills</div>
+          <div class="nav-link-item">Riverdale</div>
+          <div class="nav-link-item">All Boroughs →</div>
+        </div>
+      </details>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Big Apple Moving &amp; Storage. Licensed Interstate Carrier. USDOT Registered. All rights reserved.</p>
+  <p style="margin-top:6px"><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">FMCSA Rights</a><a href="#">Sitemap</a></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MOCKUP — New York to California Movers | bigapplemoving.com/long-distance-movers/new-york-to-california/</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+<style>
+/* ============================
+   BAM DESIGN SYSTEM
+   Orange: #E05931 | Navy: #1F2D6B | Purple: #2B2E7B | Cream: #F7F4EF
+   ============================ */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:15px;color:#333;background:#F7F4EF;line-height:1.5}
+:root{--orange:#E05931;--navy:#1F2D6B;--purple:#2B2E7B;--cream:#F7F4EF;--white:#fff;--border:rgba(0,0,0,0.1)}
+a{color:inherit;text-decoration:none}
+
+/* MOCKUP BANNER */
+.mockup-banner{background:#1F2D6B;color:#fff;text-align:center;padding:10px;font-size:12px;font-weight:600;letter-spacing:.05em}
+.mockup-banner span{background:rgba(255,255,255,0.15);padding:3px 10px;border-radius:4px;margin:0 6px}
+
+/* HERO */
+.hero{padding:32px 24px 28px;background:var(--cream);max-width:720px;margin:0 auto}
+.hero h1{color:var(--orange);font-size:24px;font-weight:700;line-height:1.25;margin-bottom:16px}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}
+.chip{display:inline-flex;align-items:center;gap:5px;border:0.5px solid rgba(0,0,0,0.18);border-radius:999px;padding:5px 12px;font-size:12px;color:#333;background:#fff;white-space:nowrap}
+.chip i{font-size:13px;color:var(--orange)}
+.qa-box{border-left:3px solid var(--orange);background:#fff;border-radius:0 6px 6px 0;padding:14px 16px;margin-bottom:20px;font-size:13px;line-height:1.65;color:#444}
+.qa-label{font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--orange);text-transform:uppercase;margin-bottom:5px}
+.qa-box strong{color:#1A1A2E}
+.form-box{background:#fff;border:0.5px solid rgba(0,0,0,0.1);border-radius:10px;padding:20px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.field{display:flex;flex-direction:column;gap:4px}
+.field label{font-size:11px;color:#666;font-weight:500;text-transform:uppercase;letter-spacing:.04em}
+.field input,.field select{border:0.5px solid rgba(0,0,0,0.15);border-radius:6px;padding:9px 10px;font-size:13px;background:#fff;color:#333;width:100%}
+.form-btn{width:100%;background:#333;color:#fff;border:none;border-radius:6px;padding:12px;font-size:14px;font-weight:600;cursor:pointer;margin-top:8px;letter-spacing:.01em}
+.form-btn:hover{background:#222}
+
+/* STATS BAR */
+.stats{background:var(--navy);padding:16px 24px}
+.stats-inner{max-width:720px;margin:0 auto;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.stat{text-align:center;color:#fff;flex:1;min-width:90px}
+.stat .val{font-size:17px;font-weight:700;display:block;line-height:1.2}
+.stat .lbl{font-size:10px;color:rgba(255,255,255,0.65);display:block;margin-top:3px}
+
+/* SECTIONS */
+section{padding:32px 24px}
+section.white{background:#fff}
+.sec-inner{max-width:720px;margin:0 auto}
+h2{color:var(--purple);font-size:19px;font-weight:700;margin-bottom:14px;line-height:1.3}
+h3{font-size:14px;font-weight:700;color:#1A1A2E;margin-bottom:4px}
+p{font-size:13px;color:#555;line-height:1.65}
+
+/* ROUTE TABLE */
+.route-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:4px}
+.route-table tr{border-bottom:0.5px solid rgba(0,0,0,0.07)}
+.route-table td:first-child{font-weight:600;color:var(--purple);font-size:12px;padding:10px 12px 10px 0;width:44%;vertical-align:top}
+.route-table td:last-child{padding:10px 0;color:#444}
+
+/* PRICING */
+.price-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}
+.price-card{background:#fff;border:0.5px solid rgba(0,0,0,0.1);border-radius:10px;padding:16px;text-align:center}
+.price-card.featured{border:1.5px solid var(--orange)}
+.featured-tag{font-size:10px;font-weight:700;background:#FEE8E0;color:var(--orange);padding:2px 8px;border-radius:4px;display:inline-block;margin-bottom:6px}
+.price-label{font-size:11px;font-weight:600;color:#888;margin-bottom:4px}
+.price-tag{font-size:18px;font-weight:700;color:var(--orange);margin:4px 0}
+.price-sub{font-size:11px;color:#aaa}
+.price-note{font-size:12px;color:#666;font-style:italic;line-height:1.6;padding:10px 0}
+.price-btn{display:inline-flex;align-items:center;gap:7px;background:var(--orange);color:#fff;border:none;border-radius:7px;padding:11px 22px;font-size:13px;font-weight:600;cursor:pointer;margin-top:10px}
+
+/* COMP TABLE */
+.comp-table{width:100%;border-collapse:collapse;font-size:12px;margin-top:12px}
+.comp-table th{background:#F0F0FF;color:var(--purple);padding:8px 10px;text-align:left;font-size:11px;font-weight:700;border-bottom:0.5px solid rgba(0,0,0,0.1)}
+.comp-table td{padding:8px 10px;border-bottom:0.5px solid rgba(0,0,0,0.06);color:#444;vertical-align:top;font-size:12px}
+.comp-table td:first-child{font-weight:600;color:#333}
+.badge-e{background:#E8EFF9;color:#1F3A7A;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px;white-space:nowrap}
+.badge-c{background:#FFF3E8;color:#7D4E1A;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px;white-space:nowrap}
+
+/* WHY CHOOSE */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.why-item{display:flex;gap:10px;align-items:flex-start;padding-bottom:14px;border-bottom:0.5px solid rgba(0,0,0,0.06)}
+.why-item:nth-last-child(-n+2){border-bottom:none;padding-bottom:0}
+.why-icon{width:34px;height:34px;background:#FEE8E0;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.why-icon i{font-size:17px;color:var(--orange)}
+.why-text h3{font-size:13px;margin-bottom:3px}
+.why-text p{font-size:12px;color:#666}
+
+/* CHECKLIST */
+.checklist{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:4px}
+.check-item{display:flex;align-items:flex-start;gap:7px;font-size:13px;color:#444;line-height:1.4}
+.check-item i{color:var(--orange);font-size:15px;flex-shrink:0;margin-top:1px}
+
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;margin-top:8px}
+.step{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 8px;position:relative}
+.step-num{width:38px;height:38px;background:var(--orange);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;margin-bottom:10px;position:relative;z-index:1}
+.step:not(:last-child)::after{content:'→';position:absolute;top:10px;right:-8px;color:var(--orange);font-size:14px;font-weight:700}
+.step h3{font-size:12px;font-weight:700;color:var(--purple);margin-bottom:4px}
+.step p{font-size:11px;color:#666;line-height:1.45}
+
+/* CITY CARDS */
+.city-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+.city-card{background:#fff;border:0.5px solid rgba(0,0,0,0.1);border-radius:10px;overflow:hidden}
+.city-head{background:#F0F0FF;padding:9px 13px}
+.city-head h3{font-size:13px;color:var(--purple);display:flex;align-items:center;gap:5px;margin:0}
+.city-head h3 i{font-size:13px;color:var(--orange)}
+.city-body{padding:10px 13px;font-size:12px;color:#555;line-height:1.55}
+
+/* PERSONAS */
+.persona-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+.persona-item{background:#fff;border:0.5px solid rgba(0,0,0,0.1);border-radius:10px;padding:13px;display:flex;gap:10px}
+.persona-icon{width:32px;height:32px;background:#F0F0FF;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.persona-icon i{font-size:16px;color:var(--purple)}
+.persona-text h3{font-size:12px;font-weight:700;color:#1A1A2E;margin-bottom:3px}
+.persona-text p{font-size:11px;color:#666;line-height:1.45}
+
+/* INFO BOXES (orange left border) */
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:6px}
+.info-box{background:#fff;border-left:3px solid var(--orange);border-radius:0 6px 6px 0;padding:13px 15px}
+.info-box h3{font-size:13px;font-weight:700;color:var(--orange);margin-bottom:4px}
+.info-box p{font-size:12px;color:#555;line-height:1.55}
+
+/* DIRECT CARRIER SECTION */
+.carrier-section{background:#FAEEDA;border-radius:10px;padding:22px 24px}
+.carrier-header{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.carrier-header i{font-size:20px;color:#854F0B}
+.carrier-header h2{color:#4A2800;margin-bottom:0;font-size:18px}
+.carrier-note{font-size:13px;color:#633806;margin-bottom:16px;line-height:1.6}
+.carrier-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.carrier-item{background:rgba(255,255,255,0.55);border-radius:8px;padding:13px}
+.carrier-item h3{font-size:12px;font-weight:700;color:#4A2800;margin-bottom:4px}
+.carrier-item p{font-size:12px;color:#633806;line-height:1.5}
+
+/* FAQ */
+.faq-list{margin-top:6px}
+details{border-bottom:0.5px solid rgba(0,0,0,0.1)}
+summary{padding:15px 0;font-size:14px;font-weight:600;color:#1A1A2E;cursor:pointer;display:flex;justify-content:space-between;align-items:center;list-style:none;user-select:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'⌄';color:var(--orange);font-size:17px;font-weight:700;line-height:1}
+details[open] summary::after{content:'⌃'}
+details[open] summary{color:var(--purple)}
+.faq-ans{padding:0 0 15px;font-size:13px;color:#555;line-height:1.7}
+details.highlight-faq summary{color:var(--purple)}
+details.highlight-faq{border-left:3px solid var(--purple);padding-left:12px}
+
+/* CTA BAND */
+.cta-band{background:var(--orange);padding:36px 24px;text-align:center}
+.cta-inner{max-width:720px;margin:0 auto}
+.cta-band h2{color:#fff;font-size:20px;font-weight:700;margin-bottom:10px}
+.cta-chips{display:flex;justify-content:center;flex-wrap:wrap;gap:7px;margin-bottom:18px}
+.cta-chip{background:rgba(255,255,255,0.2);color:#fff;font-size:11px;padding:3px 11px;border-radius:999px;font-weight:500}
+.cta-btn{display:inline-block;background:#fff;color:var(--orange);border:none;border-radius:7px;padding:12px 30px;font-size:14px;font-weight:700;cursor:pointer;margin-bottom:10px}
+.cta-phone{color:rgba(255,255,255,0.8);font-size:13px}
+
+/* NAV CARDS */
+.nav-section{background:#EBEBFF;padding:28px 24px}
+.nav-inner{max-width:720px;margin:0 auto}
+.nav-section h2{color:var(--purple);font-size:17px;font-weight:700;margin-bottom:14px;text-align:center}
+.nav-acc{background:#fff;border-radius:8px;overflow:hidden;border:0.5px solid rgba(43,46,123,0.15)}
+.nav-acc details{border-bottom:0.5px solid rgba(0,0,0,0.08)}
+.nav-acc details:last-child{border-bottom:none}
+.nav-acc summary{padding:12px 16px;font-size:13px;font-weight:600;color:#333;border:none}
+.nav-acc summary::after{color:var(--purple)}
+.nav-acc[open] summary{background:#F7F4EF}
+.nav-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#FAFAFE}
+.nav-card{padding:10px 16px;font-size:12px;color:var(--purple);font-weight:500;border-bottom:0.5px solid rgba(0,0,0,0.05);cursor:pointer;transition:background .15s}
+.nav-card:hover{background:#F0F0FF;color:var(--orange)}
+
+/* FOOTER */
+footer{background:#1A1A2E;padding:22px 24px;text-align:center}
+footer p{font-size:12px;color:rgba(255,255,255,0.45);line-height:1.6}
+footer a{color:rgba(255,255,255,0.35);margin:0 8px;font-size:11px}
+</style>
+</head>
+<body>
+
+<div class="mockup-banner">
+  MOCKUP — NOT LIVE &nbsp;|&nbsp; <span>bigapplemoving.com/long-distance-movers/new-york-to-california/</span> &nbsp;|&nbsp; Trello #189 &nbsp;|&nbsp; Brief: Doc 1DT5vlCQOEB…
+</div>
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <h1>New York to California Movers — Licensed NYC to CA Moving Company</h1>
+  <div class="chips">
+    <span class="chip"><i class="ti ti-certificate"></i> Licensed USDOT Carrier</span>
+    <span class="chip"><i class="ti ti-shield-check"></i> FMCSA Registered</span>
+    <span class="chip"><i class="ti ti-file-text"></i> Binding Estimates</span>
+    <span class="chip"><i class="ti ti-clock"></i> Since 1979</span>
+    <span class="chip"><i class="ti ti-star"></i> 4.9★ Google</span>
+  </div>
+  <div class="qa-box">
+    <div class="qa-label">Quick Answer</div>
+    Moving from NYC to California typically costs <strong>$3,000–$14,000</strong> depending on home size and service type. Big Apple Moving is a licensed interstate carrier — we own our trucks and work with designated moving teams. Exclusive transit is 7–10 business days; consolidated is 14–21 days. We serve all of California: LA, San Francisco, San Diego, Orange County, and San Jose.
+  </div>
+  <div class="form-box">
+    <div class="form-row">
+      <div class="field"><label>Moving From</label><input type="text" value="New York, NY"></div>
+      <div class="field"><label>Moving To</label><input type="text" placeholder="CA City / Zip"></div>
+    </div>
+    <div class="form-row">
+      <div class="field"><label>Move Date</label><input type="date"></div>
+      <div class="field"><label>Home Size</label>
+        <select><option>Studio / 1BR</option><option>2 Bedroom</option><option selected>3BR+</option></select>
+      </div>
+    </div>
+    <div class="field" style="margin-bottom:0">
+      <label>Service Type</label>
+      <select><option>Exclusive (dedicated truck)</option><option>Consolidated (shared, lower cost)</option><option>Not sure — advise me</option></select>
+    </div>
+    <button class="form-btn">Get My Free Quote →</button>
+  </div>
+</div>
+
+<!-- ===== STATS BAR ===== -->
+<div class="stats">
+  <div class="stats-inner">
+    <div class="stat"><span class="val">45+</span><span class="lbl">Years Cross-Country</span></div>
+    <div class="stat"><span class="val">~2,800 mi</span><span class="lbl">NYC to LA</span></div>
+    <div class="stat"><span class="val">7–10 Days</span><span class="lbl">Exclusive Service</span></div>
+    <div class="stat"><span class="val">20,000+</span><span class="lbl">Long-Distance Moves</span></div>
+  </div>
+</div>
+
+<!-- ===== ROUTE SNAPSHOT ===== -->
+<section class="white">
+  <div class="sec-inner">
+    <h2>NYC to California — Route at a Glance</h2>
+    <table class="route-table">
+      <tr><td>Distance from NYC</td><td>~2,800 miles to Los Angeles &nbsp;/&nbsp; ~2,900 miles to San Francisco</td></tr>
+      <tr><td>Approximate Drive</td><td>40–45 hours non-stop</td></tr>
+      <tr><td>Transit — Exclusive Truck</td><td>7–10 business days — guaranteed delivery window</td></tr>
+      <tr><td>Transit — Consolidated</td><td>14–21 business days — shared truck, flexible timeline</td></tr>
+      <tr><td>Popular Destinations</td><td>Los Angeles, San Francisco, San Diego, Irvine, San Jose, Santa Barbara</td></tr>
+      <tr><td>Pickup Areas</td><td>All 5 NYC boroughs + tri-state (NJ, CT)</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section>
+  <div class="sec-inner">
+    <h2>How Much Does It Cost to Move from NYC to California?</h2>
+    <div class="price-cards">
+      <div class="price-card">
+        <div class="price-label">Studio / 1BR</div>
+        <div class="price-tag">$3,000–$5,500</div>
+        <div class="price-sub">Consolidated or exclusive</div>
+      </div>
+      <div class="price-card featured">
+        <div class="featured-tag">Most common</div>
+        <div class="price-label">2 Bedroom</div>
+        <div class="price-tag">$5,500–$9,000</div>
+        <div class="price-sub">Exclusive recommended</div>
+      </div>
+      <div class="price-card">
+        <div class="price-label">3BR+</div>
+        <div class="price-tag">$8,000–$14,000</div>
+        <div class="price-sub">In-home survey required</div>
+      </div>
+    </div>
+    <p class="price-note"><em>Ranges are market-rate estimates — pricing varies by floor access, service level, packing, and CA destination. For your exact price, request a free binding quote. Peak season: May–September and holiday windows.</em></p>
+    <button class="price-btn"><i class="ti ti-quote"></i> Get a Free Quote →</button>
+
+    <h2 style="margin-top:28px">Exclusive vs. Consolidated — Which Should You Choose?</h2>
+    <p style="font-size:13px;color:#666;margin-bottom:0">For most 2BR+ moves on this route, exclusive is the right call. The price difference is justified by a guaranteed delivery window and single handling over 2,800 miles.</p>
+    <table class="comp-table">
+      <thead>
+        <tr><th>Factor</th><th><span class="badge-e">Exclusive Truck</span></th><th><span class="badge-c">Consolidated</span></th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Best for</td><td>2BR+, fixed arrival date, high-value items</td><td>Studio/1BR, flexible timeline, budget-first</td></tr>
+        <tr><td>Delivery window</td><td>7–10 business days, guaranteed</td><td>14–21 business days, estimated</td></tr>
+        <tr><td>Handlings</td><td>One truck, NYC to CA door-to-door</td><td>May transfer between hubs or trucks en route</td></tr>
+        <tr><td>Delay risk</td><td>Minimal — your truck only</td><td>Depends on other customers' schedules</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== WHY CHOOSE BAM ===== -->
+<section class="white">
+  <div class="sec-inner">
+    <h2>Why New Yorkers Moving to California Choose Big Apple</h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-icon"><i class="ti ti-truck"></i></div>
+        <div class="why-text">
+          <h3>We Own the Truck</h3>
+          <p>We are not a broker. We own our fleet and work with designated moving teams — your belongings stay in the same hands from NYC pickup to California delivery.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><i class="ti ti-file-text"></i></div>
+        <div class="why-text">
+          <h3>Binding Written Estimates</h3>
+          <p>We survey your inventory and lock in your price before loading a single box. No surprises at California delivery — ever.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><i class="ti ti-shield"></i></div>
+        <div class="why-text">
+          <h3>Full Replacement Value Protection</h3>
+          <p>Your belongings are covered at full replacement value from NYC pickup through California delivery — not depreciated value.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><i class="ti ti-user"></i></div>
+        <div class="why-text">
+          <h3>Dedicated Move Coordinator</h3>
+          <p>One person manages your entire move — survey through CA delivery. Reachable by phone or text throughout the 2,800-mile transit.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><i class="ti ti-clock"></i></div>
+        <div class="why-text">
+          <h3>45+ Years Moving New Yorkers West</h3>
+          <p>We know I-40 and I-80 realities, LA high-rise COI requirements, and SF parking restrictions. This is a routine run for our teams.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><i class="ti ti-star"></i></div>
+        <div class="why-text">
+          <h3>4.9★ Google Rating</h3>
+          <p>Hundreds of verified five-star reviews from customers who made the same NYC to California move you're planning.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHAT'S INCLUDED ===== -->
+<section>
+  <div class="sec-inner">
+    <h2>What's Included in Your NYC to California Move</h2>
+    <div class="checklist">
+      <div class="check-item"><i class="ti ti-check"></i><span>In-home or virtual survey + binding estimate</span></div>
+      <div class="check-item"><i class="ti ti-check"></i><span>Cross-country professional packing standards</span></div>
+      <div class="check-item"><i class="ti ti-check"></i><span>Furniture disassembly &amp; reassembly</span></div>
+      <div class="check-item"><i class="ti ti-check"></i><span>Padded blanket protection for all furniture</span></div>
+      <div class="check-item"><i class="ti ti-check"></i><span>Pickup from any NYC borough</span></div>
+      <div class="check-item"><i class="ti ti-check"></i><span>Direct transport — one truck, NYC to CA</span></div>
+      <div class="check-item"><i class="ti ti-check"></i><span>Delivery window confirmed pre-departure</span></div>
+      <div class="check-item"><i class="ti ti-check"></i><span>CA building coordination + parking permits</span></div>
+      <div class="check-item"><i class="ti ti-check"></i><span>Shipment tracking throughout transit</span></div>
+      <div class="check-item"><i class="ti ti-check"></i><span>Storage-in-transit available if needed</span></div>
+      <div class="check-item"><i class="ti ti-check"></i><span>Professional packing add-on available</span></div>
+      <div class="check-item"><i class="ti ti-check"></i><span>Full replacement value protection included</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="white">
+  <div class="sec-inner">
+    <h2>How Your NYC to California Move Works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Free Survey &amp; Binding Estimate</h3>
+        <p>In-home or virtual video survey. Price locked before a single box is packed — no guesswork.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Professional Pack &amp; Load in NYC</h3>
+        <p>Our crews wrap every piece to cross-country standards and load your dedicated truck for the 2,800-mile run.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Cross-Country Transport</h3>
+        <p>Direct to California — tracked transit, coordinator reachable throughout. No hub transfers on exclusive service.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>California Delivery</h3>
+        <p>We handle building access, elevator reservations, and parking. Every item placed where you want it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== POPULAR CA DESTINATIONS ===== -->
+<section>
+  <div class="sec-inner">
+    <h2>Popular NYC to California Moving Routes</h2>
+    <div class="city-grid">
+      <div class="city-card">
+        <div class="city-head"><h3><i class="ti ti-map-pin"></i>Los Angeles</h3></div>
+        <div class="city-body">Our most-requested CA destination. Silver Lake, Santa Monica, West Hollywood, The Valley, Long Beach, and East LA. We coordinate COI requirements for high-rises and HOA protocols for gated communities.</div>
+      </div>
+      <div class="city-card">
+        <div class="city-head"><h3><i class="ti ti-map-pin"></i>San Francisco</h3></div>
+        <div class="city-body">SF has narrow streets, steep hills, and strict truck size restrictions. We handle all permitting in advance. Also serving Oakland, Berkeley, Marin County, and Palo Alto.</div>
+      </div>
+      <div class="city-card">
+        <div class="city-head"><h3><i class="ti ti-map-pin"></i>San Diego</h3></div>
+        <div class="city-body">Growing destination for tech, healthcare, and military professionals from NYC. La Jolla, Coronado, North County, the South Bay — all covered with full building coordination.</div>
+      </div>
+      <div class="city-card">
+        <div class="city-head"><h3><i class="ti ti-map-pin"></i>Orange County</h3></div>
+        <div class="city-body">Irvine, Huntington Beach, Newport Beach, Laguna Beach, and Anaheim. Popular with NYC families seeking SoCal suburbs with more space and schools.</div>
+      </div>
+      <div class="city-card">
+        <div class="city-head"><h3><i class="ti ti-map-pin"></i>San Jose / Silicon Valley</h3></div>
+        <div class="city-body">Tech and corporate relocations from NYC to Sunnyvale, Mountain View, Cupertino, and San Jose. We coordinate with corporate relocation programs and reimburse billing.</div>
+      </div>
+      <div class="city-card">
+        <div class="city-head"><h3><i class="ti ti-plus"></i>All of California</h3></div>
+        <div class="city-body">Sacramento, Santa Barbara, Fresno, Palm Springs, and anywhere else in CA. If you have a California zip code, we service it. Get a free quote for your specific destination.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHO MOVES ===== -->
+<section class="white">
+  <div class="sec-inner">
+    <h2>Who Typically Moves from NYC to California?</h2>
+    <div class="persona-grid">
+      <div class="persona-item">
+        <div class="persona-icon"><i class="ti ti-device-laptop"></i></div>
+        <div class="persona-text">
+          <h3>Tech Professionals</h3>
+          <p>Google, Apple, Meta, Netflix, and startup relocations. Tight start dates, often corporate-reimbursed. We work with corporate relocation programs.</p>
+        </div>
+      </div>
+      <div class="persona-item">
+        <div class="persona-icon"><i class="ti ti-movie"></i></div>
+        <div class="persona-text">
+          <h3>Entertainment Industry</h3>
+          <p>Writers, directors, producers, and performers relocating from NYC to LA for studio roles, network deals, and production companies.</p>
+        </div>
+      </div>
+      <div class="persona-item">
+        <div class="persona-icon"><i class="ti ti-building"></i></div>
+        <div class="persona-text">
+          <h3>Corporate Relocations</h3>
+          <p>Companies moving executives or teams from NYC headquarters to West Coast offices. We handle corporate billing and relocation coordination.</p>
+        </div>
+      </div>
+      <div class="persona-item">
+        <div class="persona-icon"><i class="ti ti-home"></i></div>
+        <div class="persona-text">
+          <h3>Families Relocating</h3>
+          <p>Full household moves for families choosing California for lifestyle, cost of living, or school districts. Full-service, high-care handling.</p>
+        </div>
+      </div>
+      <div class="persona-item">
+        <div class="persona-icon"><i class="ti ti-building-hospital"></i></div>
+        <div class="persona-text">
+          <h3>Healthcare Professionals</h3>
+          <p>Doctors, nurses, and researchers moving for hospital systems, biotech companies, or medical schools in San Diego, SF, or LA.</p>
+        </div>
+      </div>
+      <div class="persona-item">
+        <div class="persona-icon"><i class="ti ti-beach"></i></div>
+        <div class="persona-text">
+          <h3>Retirees &amp; Lifestyle Movers</h3>
+          <p>New Yorkers choosing California's climate and pace. High-value items, fine art, and specialty packing all available for full household moves.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHAT MAKES NYC→CA DIFFERENT ===== -->
+<section>
+  <div class="sec-inner">
+    <h2>What Makes Moving from NYC to California Different</h2>
+    <div class="info-grid">
+      <div class="info-box">
+        <h3>Cross-Country Packing Standards</h3>
+        <p>At 2,800+ miles, your belongings spend 7–21 days in transit through multiple climate zones and road conditions. Every item is packed to cross-country standards — not local-move standards.</p>
+      </div>
+      <div class="info-box">
+        <h3>Delivery Windows Are Non-Flexible</h3>
+        <p>If your CA lease or closing starts on a fixed date, consolidated service may not meet it. Exclusive transport gives you a guaranteed delivery window. Know which you're booking before signing.</p>
+      </div>
+      <div class="info-box">
+        <h3>California City Logistics</h3>
+        <p>SF has narrow streets and truck restrictions. LA high-rises require advance COI. San Diego has HOA protocols. We coordinate all of this before the truck leaves NYC.</p>
+      </div>
+      <div class="info-box">
+        <h3>Peak Season Planning</h3>
+        <p>May–September is peak demand on the NYC→CA corridor. Book 6–8 weeks ahead in peak season. We hold your date with a deposit — no surprises on move day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DIRECT CARRIER SECTION ===== -->
+<section class="white">
+  <div class="sec-inner">
+    <div class="carrier-section">
+      <div class="carrier-header">
+        <i class="ti ti-alert-triangle"></i>
+        <h2>Why This Route Requires a Direct Carrier</h2>
+      </div>
+      <p class="carrier-note">The NYC to California corridor has one of the highest rates of moving fraud in the country — bait-and-switch pricing, broker handoffs, and unvetted crews. Here's what separates us.</p>
+      <div class="carrier-grid">
+        <div class="carrier-item">
+          <h3>Brokers don't move your belongings</h3>
+          <p>Many companies advertising "NYC to California movers" are brokers who take a deposit, then sell your job to the lowest-bidding carrier you've never vetted or met.</p>
+        </div>
+        <div class="carrier-item">
+          <h3>We own the trucks, our crews handle your move</h3>
+          <p>We are a licensed motor carrier (USDOT). We own our fleet and work with designated moving teams. Your move isn't handed off — period.</p>
+        </div>
+        <div class="carrier-item">
+          <h3>Binding estimate — price locked before we load</h3>
+          <p>Non-binding estimates are how customers end up paying 30–40% more on delivery day. Our binding estimate cannot change after the survey — it's in writing before we touch a box.</p>
+        </div>
+        <div class="carrier-item">
+          <h3>One coordinator, NYC to California finish</h3>
+          <p>The same person who ran your NYC survey is reachable by phone when your truck is crossing Nevada at day 6. One number. One point of accountability. Always.</p>
+        </div>
+        <div class="carrier-item">
+          <h3>Full replacement value protection</h3>
+          <p>We offer full replacement value coverage on all cross-country moves. If something is damaged in transit, we replace at current value — not depreciated value.</p>
+        </div>
+        <div class="carrier-item">
+          <h3>45+ years on this specific route</h3>
+          <p>We've run the NYC to California corridor hundreds of times since 1979. We know the road, the cities, the buildings, and the logistics — none of it is new to us.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section>
+  <div class="sec-inner">
+    <h2>NYC to California Moving — FAQ</h2>
+    <div class="faq-list">
+      <details open>
+        <summary>How much does it cost to move from NYC to California?</summary>
+        <div class="faq-ans">Studio and 1BR moves start around $3,000; 2–3BR moves run $5,500–$9,000; larger homes start at $8,000+. These are market-rate ranges — your binding price comes from a survey of your actual inventory, floor access, service level, and CA destination. Get a free quote to see your specific number.</div>
+      </details>
+      <details>
+        <summary>How long does a NYC to California move take?</summary>
+        <div class="faq-ans">With exclusive (dedicated truck) service: 7–10 business days door to door — guaranteed delivery window. With consolidated (shared truck) service: 14–21 business days — estimated range. We confirm your delivery window before the truck leaves NYC.</div>
+      </details>
+      <details>
+        <summary>Do you offer guaranteed delivery dates for the NYC-to-California route?</summary>
+        <div class="faq-ans">Yes — with exclusive transport, we provide a guaranteed delivery window. This is especially important for a cross-country move where coordinating your California arrival with a lease start date, building move-in appointment, or HOA window matters significantly.</div>
+      </details>
+      <details>
+        <summary>Should I choose consolidated or exclusive for a NYC to California move?</summary>
+        <div class="faq-ans">For most 2BR+ moves on this route, we recommend exclusive transport. The price difference is justified by a guaranteed delivery window, faster transit, and no risk of your belongings being delayed by another customer's schedule. For studios and 1BR moves on a flexible timeline, consolidated is a solid, budget-conscious option.</div>
+      </details>
+      <details>
+        <summary>Can you handle packing for a NYC to California move?</summary>
+        <div class="faq-ans">Yes — full packing, partial packing, and specialty packing (fine art, wine, antiques, electronics) are all available. For a cross-country move of 2,800+ miles, professional packing significantly reduces the risk of damage through multiple climate zones and road conditions.</div>
+      </details>
+      <details>
+        <summary>Can you store my belongings if I'm not ready in California?</summary>
+        <div class="faq-ans">Yes. We offer storage-in-transit at our NYC facility. We hold your shipment and deliver to California when your new home is ready — no need to scramble for California storage on arrival.</div>
+      </details>
+      <details>
+        <summary>Do you pick up from all five NYC boroughs?</summary>
+        <div class="faq-ans">Yes — Manhattan, Brooklyn, Queens, the Bronx, Staten Island, and throughout the tri-state area including New Jersey and Connecticut.</div>
+      </details>
+      <details class="highlight-faq">
+        <summary>Do you also move from California back to New York?</summary>
+        <div class="faq-ans">Yes. Big Apple Moving handles moves in both directions, including California to NYC relocations. We provide licensed interstate moving, binding estimates, storage options, and coordinated delivery into all five NYC boroughs — the same level of service in reverse.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BAND ===== -->
+<div class="cta-band">
+  <div class="cta-inner">
+    <h2>Moving to California? Get Your Free NYC to CA Quote.</h2>
+    <div class="cta-chips">
+      <span class="cta-chip">Licensed USDOT Carrier</span>
+      <span class="cta-chip">Binding Estimates</span>
+      <span class="cta-chip">All NYC Boroughs</span>
+      <span class="cta-chip">All of California</span>
+      <span class="cta-chip">45+ Years Cross-Country</span>
+    </div>
+    <button class="cta-btn">Get a Free Quote →</button>
+    <div class="cta-phone">Or call us: (212) 365-0707</div>
+  </div>
+</div>
+
+<!-- ===== NAV CARDS — GLOBAL COMPONENT ===== -->
+<div class="nav-section">
+  <div class="nav-inner">
+    <h2>Movers Serving All of New York</h2>
+    <div class="nav-acc">
+      <details open>
+        <summary>Long Distance Movers</summary>
+        <div class="nav-grid">
+          <div class="nav-card">NYC to California</div>
+          <div class="nav-card">NYC to Florida</div>
+          <div class="nav-card">NYC to Washington DC</div>
+          <div class="nav-card">NYC to New Jersey</div>
+          <div class="nav-card">NYC to Texas</div>
+          <div class="nav-card">NYC to Georgia</div>
+          <div class="nav-card">Interstate Movers NYC</div>
+          <div class="nav-card">All Long Distance Routes →</div>
+        </div>
+      </details>
+      <details>
+        <summary>Manhattan Movers</summary>
+        <div class="nav-grid">
+          <div class="nav-card">Upper East Side</div>
+          <div class="nav-card">Upper West Side</div>
+          <div class="nav-card">Midtown</div>
+          <div class="nav-card">Hell's Kitchen</div>
+          <div class="nav-card">Downtown / FiDi</div>
+          <div class="nav-card">All Manhattan →</div>
+        </div>
+      </details>
+      <details>
+        <summary>Brooklyn Movers</summary>
+        <div class="nav-grid">
+          <div class="nav-card">Williamsburg</div>
+          <div class="nav-card">Park Slope</div>
+          <div class="nav-card">DUMBO</div>
+          <div class="nav-card">Flatbush</div>
+          <div class="nav-card">Bay Ridge</div>
+          <div class="nav-card">All Brooklyn →</div>
+        </div>
+      </details>
+      <details>
+        <summary>Queens &amp; Bronx Movers</summary>
+        <div class="nav-grid">
+          <div class="nav-card">Astoria</div>
+          <div class="nav-card">Long Island City</div>
+          <div class="nav-card">Flushing</div>
+          <div class="nav-card">Forest Hills</div>
+          <div class="nav-card">Riverdale</div>
+          <div class="nav-card">All Boroughs →</div>
+        </div>
+      </details>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>© 2026 Big Apple Moving &amp; Storage. Licensed Interstate Carrier. USDOT Registered. All rights reserved.</p>
+  <p style="margin-top:6px"><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">FMCSA Rights</a><a href="#">Sitemap</a></p>
+</footer>
+
+</body>
+</html>
